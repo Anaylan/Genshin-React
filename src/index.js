@@ -3,12 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
+);
+ReactDOM.render(
+    <React.StrictMode>
+        <Footer />
+    </React.StrictMode>,
+    document.getElementById('footer')
+);
+ReactDOM.render(
+    <React.StrictMode>
+        <Navbar />
+    </React.StrictMode>,
+    document.getElementById('header')
 );
 
 // If you want to start measuring performance in your app, pass a function
