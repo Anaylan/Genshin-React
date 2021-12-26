@@ -4,11 +4,10 @@ import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-
+import Header from "./components/Header"
 ReactDOM.render(
 	<React.StrictMode>
-		<Navbar />
+		<Header />
 	</React.StrictMode>,
 	document.getElementById("header")
 )
@@ -16,6 +15,7 @@ ReactDOM.render(
 ReactDOM.render(
 	<React.StrictMode>
 		<App />
+
 	</React.StrictMode>,
 	document.getElementById("root")
 )
