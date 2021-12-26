@@ -1,0 +1,28 @@
+//@import url(~react-bootstrap);
+
+@font-face {
+  font-family: "Genshin Impact";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/genshin_impact.woff2") format("woff2");
+  font-display: swap;
+}
+* {
+  font-family: "Genshin Impact" !important;
+  // font-weight: normal;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  // grid-template-areas: "#header" "#page" "#footer";
+  // grid-template-columns: [line1] 300px [line2] auto [line3];
+  // grid-template-rows: [row1] 60px [row2] 1fr [row3] 30px [row4];
+}
+
+.bg-img {
+  background-image: url(./image/backround.webp);
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}

@@ -26,10 +26,11 @@
 	</head>
 	<body class="bg-img">
 		<noscript>You need to enable JavaScript to run this app.</noscript>
-		<header id="header"></header>
-		<main id="page">
+		<header class="navbar navbar-light position-sticky fixed-top bg-white shadow" id="header"></header>
+		<main id="page" class="h-100">
 			<section
 				class="
+				h-100
 					bg-white bg-opacity-75
 					shadow
 					rounded-top
@@ -37,9 +38,9 @@
 					container-lg container-fluid
 				" 
 			>
-				<div class="pt-3" id="app"></div>
+				<div class="pt-3" id="root"></div>
 			</section>
 		</main>
-		<footer id="footer"></footer>
+		<footer class="bg-white shadow" id="footer"></footer>
 	</body>
 </html>
