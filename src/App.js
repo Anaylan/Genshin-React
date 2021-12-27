@@ -2,11 +2,12 @@
 import "./App.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Button from "react-bootstrap/Button"
+import LayoutDefault from "./layouts/LayoutDefault";
 function App() {
 	return (
-		<div className='App'>
+		<LayoutDefault>
 			<Button>This is a button</Button>
-		</div>
+		</LayoutDefault>
 	)
 }
 

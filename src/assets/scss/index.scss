@@ -2,7 +2,7 @@
   font-family: "Genshin Impact";
   font-style: normal;
   font-weight: normal;
-  src: url("./fonts/genshin_impact.woff2") format("woff2");
+  src: url("./assets/fonts/genshin_impact.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -27,7 +27,7 @@ body, html {
 }
 
 .bg-img {
-  background-image: url(./image/backround.webp);
+  background-image: url(./assets/images/backround.webp);
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
   background-size: cover;
