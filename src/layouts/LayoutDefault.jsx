@@ -1,15 +1,14 @@
-import ReactDOM from "react-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import React from "react";
 
-ReactDOM.render(
+const LayoutDefault = ({ children }) => (
     <>
-        <Header/>
+        <Header navPosition="right" className="reveal-from-bottom" />
         <main className="site-content">
-            {/* eslint-disable-next-line no-undef */}
             {children}
         </main>
-        <Footer/>
+        <Footer />
     </>
-)
+);
+
+export default LayoutDefault;
