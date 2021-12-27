@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Genshin Impact";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/genshin_impact.woff2") format("woff2");
+  font-display: swap;
+}
+
+* {
+  font-family: "Genshin Impact" !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+  .rounded-top {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+.bg-img {
+  background-image: url(./image/backround.webp);
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1 1 auto;
+}
+
+#footer {
+  height: fit-content;
+}
+
+#header {
+  height: fit-content;
+
+  #main_bar {
+    display: none;
+  }
+
+  #mobile_bar {
+    display: none;
+  }
+
+  @media (min-width: 992px) {
+    #main_bar {
+      display: block;
+    }
+  }
+  @media (max-width: 991px) {
+    #mobile_bar {
+      display: block;
+    }
+  }
+
+  nav {
+    .dropdown {
+      transition: 1s;
+      -webkit-animation: 1s;
+      animation: 1s;
+    }
+
+    .nav-item {
+      transition: 1s;
+    }
+  }
+}
+
+.fs-8 {
+  font-size: 13px !important;
+}
