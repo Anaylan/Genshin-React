@@ -27,7 +27,7 @@ body, html {
 }
 
 .bg-img {
-  background-image: url(./assets/images/backround.webp);
+  background-image: url('./assets/images/backround.webp');
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -35,13 +35,18 @@ body, html {
 }
 
 .wrapper {
-  height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-#root {
+#page {
   flex: 1 1 auto;
+
+
+  section {
+    min-height: 100%;
+  }
 }
 
 #footer {
@@ -86,3 +91,4 @@ body, html {
 .fs-8 {
   font-size: 13px !important;
 }
+

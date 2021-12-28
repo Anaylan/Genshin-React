@@ -1,7 +1,6 @@
 import React from 'react';
 import {Card, CardGroup, CardImg} from "react-bootstrap";
-import CardHeader from "react-bootstrap/CardHeader";
-
+import classes from './css/character.css'
 const CharacterItem = (props) => {
     console.log(props)
     return (
