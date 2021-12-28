@@ -4,16 +4,16 @@ import classes from './css/character.css'
 const CharacterItem = (props) => {
     console.log(props)
     return (
-        <Card className={`character border border-dark rounded ${props.character.weapon_type} ${props.character.rarity}`}>
-            <a className={'text-center rounded-0'}>
+        <div className={`character border rounded ${props.character.weapon_type} ${props.character.rarity}`}>
+            <a className={'text-center'}>
                 <div className={'card-img'}>
-                    <CardImg className={'w-100'} src={props.character.src}/>
+                    <img className={'w-100'} src={props.character.src} alt={props.character.alt}/>
                 </div>
-                <div className={'card-body bg-white text-black'}>
-                    {props.character.title}
+                <div className={'card-body fs-8 bg-white text-black'}>
+                    {props.character.body}
                 </div>
             </a>
-        </Card>
+        </div>
     );
 };
 export default CharacterItem;

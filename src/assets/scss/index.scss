@@ -92,3 +92,33 @@ body, html {
   font-size: 13px !important;
 }
 
+.common {
+  background-image: url('./assets/images/rarity//bg-2-star.webp') !important;
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+}
+.trash {
+  background-image: url('./assets/images/rarity//bg-1-star.webp') !important;
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+}
+.legendary {
+  background-image: url('./assets/images/rarity/bg-5-star.webp') !important;
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+}
+.epic {
+  background-image: url('./assets/images/rarity/bg-4-star.webp') !important;
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+}
+.rare {
+  background-image: url('./assets/images/rarity/bg-3-star.webp') !important;
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+}

@@ -10,30 +10,28 @@
   .character {
     z-index: 321;
     position: relative;
-    display: grid;
-    grid-column: 100%;
+    display: flex;
+    flex-direction: column;
     transition: 0.3s;
     width: 100%;
     height: 100%;
 
     .card-img {
       width: 100%;
-      height: 91%;
-
+      height: 90%;
       img {
         width: 100%;
         height: 100%;
       }
     }
-
     .card-body {
-      height: 9%;
-      flex-direction: column;
+      //height: 5%;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 3px;
     }
+
+
 
   }
 
