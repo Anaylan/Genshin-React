@@ -25,30 +25,23 @@
     transition: 0.3s;
     width: 100%;
     height: 100%;
+    //height: 39px;
     .card-img {
       width: 100%;
-      height: 91%;
+      //height: 91%;
       img {
         width: 100%;
         height: 100%;
       }
     }
     .card-body {
-      height: 9%;
+      //height: 9%;
       flex-direction: column;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 3px;
     }
-    // .card-tag {
-    // 	display: flex;
-    // 	align-self: flex-start;
-    // 	justify-self: start;
-    // 	min-width: 100px;
-    // 	padding: 8px;
-    // 	// margin-top: 1rem;
-    // }
   }
   @media (min-width: 993px) {
     grid-template-columns: repeat(5, minmax(18%, 20%));
@@ -61,5 +54,8 @@
   }
   @media (max-width: 480px) {
     grid-template-columns: repeat(2, minmax(45%, 50%));
+  }
+  @media (max-width: 350px) {
+    grid-template-columns: repeat(1, minmax(45%, 50%));
   }
 }

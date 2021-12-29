@@ -4,7 +4,7 @@ const Home = () => {
     document.title = "Гайды | Genshin Easy";
     return (<div>
 
-        </div>);
+    </div>);
 };
 
 export default Home;
