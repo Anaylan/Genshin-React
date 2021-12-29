@@ -1,0 +1,1 @@
+import AlbedoFace from '../../../assets/images/characters/Albedo/card.webp'
