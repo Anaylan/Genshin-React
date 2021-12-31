@@ -65,7 +65,7 @@ const CharacterList = () => {
             body: 'Ayaka',
             src: require('../../../assets/images/characters/Chongyun/card.webp'),
             weapon_type: 'sword',
-            rarity: 'legendary',
+            rarity: 'epic',
             element: 'cryo'
         },
         {
