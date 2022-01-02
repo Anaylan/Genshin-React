@@ -1,46 +1,44 @@
 import React from "react";
-import { Nav, NavDropdown } from "react-bootstrap";
-import { BrowserRouter, Link } from "react-router-dom";
+import { NavDropdown } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 const NavLinks = () => {
   return (
-    <BrowserRouter>
       <ul className="navbar-nav mr-auto mb-0">
         <li className="nav-item">
-          <Link to="/home" className="nav-link">
+          <NavLink to="/" className="nav-link">
             Главная
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link to="/guides" className="nav-link">
+          <NavLink to="/guides" className="nav-link">
             Гайды
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
           <NavDropdown className="align-items-center" title="База знаний">
             <NavDropdown.Item>
-              <Link to={"/wiki/weapons"} className="nav-link">
+              <NavLink to={"/wiki/weapons"} className="nav-link">
                 Оружие
-              </Link>
+              </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <Link to={"/wiki/characters"} className="nav-link">
+              <NavLink to={"/wiki/characters"} className="nav-link">
                 Персонажи
-              </Link>
+              </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <Link to={"/wiki/artifacts"} className="nav-link">
+              <NavLink to={"/wiki/artifacts"} className="nav-link">
                 Артефакты
-              </Link>
+              </NavLink>
             </NavDropdown.Item>
           </NavDropdown>
         </li>
         <li className="nav-item">
-          <Link to="/about" className="nav-link">
+          <NavLink to="/about" className="nav-link">
             О нас
-          </Link>
+          </NavLink>
         </li>
       </ul>
-    </BrowserRouter>
   );
 };
 

@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Guides = () => {
+    document.title = '123';
     return (
         <div>
-            123123123
+            Гайды и прохождения
         </div>
     );
 };
