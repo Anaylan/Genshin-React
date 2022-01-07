@@ -11,6 +11,7 @@ import NotFound from "../views/NotFound";
 import CreatePost from "../views/CreatePost";
 import DeletePost from "../views/DeletePost";
 import LayoutDefault from "../layouts/LayoutDefault";
+import Character from "../views/characters/Character";
 
 const AppRoute = () => {
   return (
@@ -18,7 +19,7 @@ const AppRoute = () => {
       <Route path="/" element={<LayoutDefault />}>
         <Route index element={<Home />} />
         <Route path="wiki/characters" element={<Characters />} />
-        <Route path="wiki/characters/:id" element={<Characters />} />
+        <Route path="wiki/characters/:id" element={<Character/>} />
         <Route path="guides" element={<Guides />} />
         <Route path="wiki/weapons" element={<Weapons />} />
         <Route path="wiki/weapons/:id" element={<Weapons />} />
