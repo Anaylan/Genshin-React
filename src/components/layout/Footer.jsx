@@ -3,7 +3,7 @@ import {Container} from "react-bootstrap";
 
 function Footer(props) {
     return (
-        <footer className="bg-white shadow" id="footer">
+        <footer className="bg-white border" id="footer">
             <Container className='align-items-center pt-3'>
                 <div>
                     <p className="text-center fs-8 text-uppercase mb-0 pb-0 text-wrap">
