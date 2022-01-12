@@ -1,6 +1,7 @@
 import React from 'react';
 
-const CreatePost = () => {
+const CreatePost = (props) => {
+    document.title = props.title;
     return (
         <div>
             Создать пост

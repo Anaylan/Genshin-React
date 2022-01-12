@@ -1,6 +1,8 @@
 import React from 'react';
 
-const NotFound = () => {
+const NotFound = (props) => {
+    document.title = props.title;
+
     return (
         <div>
             Не найдено

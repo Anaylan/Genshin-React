@@ -56,29 +56,6 @@ body, html {
 #header {
   height: fit-content;
 
-  #main_bar {
-    display: none;
-  }
-
-  #mobile_bar {
-    display: none;
-  }
-
-  @media (min-width: 992px) {
-    #main_bar {
-      display: block;
-    }
-  }
-  @media (max-width: 991px) {
-    #mobile_bar {
-      display: block;
-    }
-  }
-
-  .font {
-    font-size: 15px;
-    height: 22px;
-  }
 
   nav {
     .dropdown {
@@ -93,19 +70,24 @@ body, html {
   }
 }
 
+.font {
+  font-size: 15px;
+  height: 22px;
+}
+
 .fs-8 {
   font-size: 13px !important;
 }
 
 .common {
-  background-image: url('./assets/images/rarity//bg-2-star.webp') !important;
+  background-image: url("./assets/images/rarity/bg-2-star.webp") !important;
   background-size: cover;
   background-repeat: no-repeat, no-repeat;
   background-position: center center;
 }
 
 .trash {
-  background-image: url('./assets/images/rarity//bg-1-star.webp') !important;
+  background-image: url('./assets/images/rarity/bg-1-star.webp') !important;
   background-size: cover;
   background-repeat: no-repeat, no-repeat;
   background-position: center center;
@@ -126,7 +108,7 @@ body, html {
 }
 
 .rare {
-  background-image: url('./assets/images/rarity/bg-3-star.webp') !important;
+  background-image: url("./assets/images/rarity/bg-3-star.webp") !important;
   background-size: cover;
   background-repeat: no-repeat, no-repeat;
   background-position: center center;

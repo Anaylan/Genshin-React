@@ -2,10 +2,11 @@
 import React, {lazy, Suspense} from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import LayoutDefault from "../layouts/LayoutDefault";
-import {useNavigate} from "react-router";
 
-const Characters = lazy(() => import("../views/Characters"));
 const Home = lazy(() => import("../views/Home"));
+const Login = lazy(() => import("../views/Login"));
+const RequireAuth = lazy(() => import("../views/private/RequireAuth"));
+const Characters = lazy(() => import("../views/Characters"));
 const Guides = lazy(() => import("../views/Guides"));
 const Weapons = lazy(() => import("../views/Weapons"));
 const Artifacts = lazy(() => import("../views/Artifacts"));
@@ -18,35 +19,45 @@ const Character = lazy(() => import("../views/Character"));
 const Guide = lazy(() => import("../views/Guide"));
 const Artifact = lazy(() => import("../views/Artifact"));
 
+
 const AppRoute = () => {
-    const navigate = useNavigate();
-    const goBack = () => navigate(-1)
-    const goForward = () => navigate(1)
+
     return (
+
         <Suspense fallback={<div>Загрузка...</div>}>
             <Routes>
                 <Route path="/" element={<LayoutDefault/>}>
-                    <Route index element={<Home/>}/>
-                    <Route path="guides" element={<Guides/>}/>
-                    <Route path="guides/:id" element={<Guide/>}/>
+                    <Route index element={<Home title='Гайды | Genshin Easy' />}/>
+                    <Route path={'login'} element={<Login title='' />}/>
+                    <Route path="guides" element={<Guides title='' />}/>
+                    <Route path="guides/:id" element={<Guide title='' />}/>
                     <Route path="wiki">
-                        <Route path="characters" element={<Characters/>}/>
-                        <Route path="characters/:title" element={<Character/>}/>
+                        <Route path="characters" element={<Characters title='' />}/>
+                        <Route path="characters/:title" element={<Character title='' />}/>
 
-                        <Route path="weapons" element={<Weapons/>}/>
-                        <Route path="weapons/:id" element={<Weapons/>}/>
+                        <Route path="weapons" element={<Weapons title='' />}/>
+                        <Route path="weapons/:id" element={<Weapons title='' />}/>
 
-                        <Route path="artifacts" element={<Artifacts/>}/>
-                        <Route path="artifacts/:id" element={<Artifact/>}/>
+                        <Route path="artifacts" element={<Artifacts title='' />}/>
+                        <Route path="artifacts/:id" element={<Artifact title='' />}/>
                     </Route>
-                    <Route path="about" element={<About/>}/>
-                    <Route path="c/r/e/a/t/e/n/e/w/post/20/02/admin" element={<CreatePost/>}/>
-                    <Route path="d/e/l/e/t/e/post/20/02/admin" element={<DeletePost/>}/>
-                    <Route path="404" element={<NotFound/>}/>
+                    <Route path="about" element={<About title=' ' />}/>
+                    <Route path="create/new/post" element={
+                        <RequireAuth>
+                            <CreatePost title='' />
+                        </RequireAuth>
+                    }/>
+                    <Route path="edit/post/:id" element={
+                        <RequireAuth>
+                            <DeletePost title=' ' />
+                        </RequireAuth>
+                    }/>
+                    <Route path="404" element={<NotFound title=' ' />}/>
                     <Route path="*" element={<Navigate replace to={'/404'}/>}/>
                 </Route>
             </Routes>
         </Suspense>
+
     );
 };
 

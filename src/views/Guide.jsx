@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Guide = () => {
+const Guide = (props) => {
+    document.title = props.title;
     return (
         <div>
             123

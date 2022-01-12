@@ -73,8 +73,9 @@ const CharacterList = () => {
     return (
         <div id={'characters'}>
             {characters.map((characters) =>
-                <Link key={characters.id} to={`/wiki/characters/${characters.title}`}>
-                <CharacterItem character={characters} key={characters.id}/>
+                <Link key={characters.id} to={`/wiki/characters/${characters.title}`}
+                      state={{component: <div>123</div>, title: 'component'}}>
+                    <CharacterItem character={characters} key={characters.id}/>
                 </Link>)
             }
         </div>

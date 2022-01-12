@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Guides = () => {
-    document.title = '123';
+const Guides = (props) => {
+    document.title = props.title;
     return (
         <div>
             Гайды и прохождения

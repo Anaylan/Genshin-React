@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
+import {useLocation} from "react-router-dom";
 
 const Albedo = () => {
+    const loc = useLocation();
+    console.log(loc)
     const [stories, setStories] = useState([
         {
             id: 1,
@@ -62,7 +65,7 @@ const Albedo = () => {
     ])
     return (
         <div>
-
+            123
         </div>
     );
 };

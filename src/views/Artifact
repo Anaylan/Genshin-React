@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Artifact = () => {
+const Artifact = (props) => {
+    document.title = props.title;
+
     return (
         <div>
             123

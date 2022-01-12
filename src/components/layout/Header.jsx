@@ -13,7 +13,7 @@ function Header() {
     return (
         <React.Fragment>
             <header className="position-sticky fixed-top bg-white border" id="header">
-                <Navbar id="main_bar">
+                <Navbar id="main_bar" className={'d-lg-block d-none'}>
                     <div className="container justify-content-between align-items-center">
                         <div>
                             <div className="navbar-brand align-items-center d-flex">
@@ -25,7 +25,7 @@ function Header() {
                         </div>
                     </div>
                 </Navbar>
-                <Navbar id="mobile_bar">
+                <Navbar id="mobile_bar"  className={'d-lg-none d-block'}>
                     <div className="container-fluid justify-content-between align-items-center">
                         <div>
                             <div className="navbar-brand align-items-center d-flex">

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const DeletePost = () => {
+const DeletePost = (props) => {
+    document.title = props.title;
     return (
         <div>
             Удалить пост
