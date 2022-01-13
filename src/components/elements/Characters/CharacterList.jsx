@@ -7,7 +7,7 @@ const CharacterList = () => {
     const [characters, setCharacters] = useState([
         {
             id: 1,
-            title: 'albedo',
+            title: "albedo",
             body: 'Альбедо',
             src: require('../../../assets/images/characters/Albedo/card.webp'),
             weapon_type: 'sword',
@@ -73,8 +73,7 @@ const CharacterList = () => {
     return (
         <div id={'characters'}>
             {characters.map((characters) =>
-                <Link key={characters.id} to={`/wiki/characters/${characters.title}`}
-                      state={{component: <div>123</div>, title: 'component'}}>
+                <Link key={characters.id} to={`/wiki/characters/${characters.title}`}>
                     <CharacterItem character={characters} key={characters.id}/>
                 </Link>)
             }

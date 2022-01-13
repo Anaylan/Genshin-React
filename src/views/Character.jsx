@@ -1,22 +1,25 @@
-import {lazy, useEffect} from 'react';
+import {lazy, useEffect, useState} from 'react';
 import {useLocation, useParams} from 'react-router-dom';
 import CharacterCard from "../components/elements/characterCard";
+
 
 const Character = (props) => {
 
 
-    const params = useParams();
-    const title = params.title;
-    document.title = props.title;
-    const Ch = lazy(() => import(`./characters/${title}`));
+    const {title} = useParams();
+    const [post, setPost] = useState(null);
+
     useEffect(() => {
-        console.log(1);
-    }, [])
-    const location = useLocation()
-    console.log(location.pathname);
+        fetch(`http://localhost:8000/characters/${title}`)
+            .then(res => res.json())
+            .then(data => setPost(data))
+    }, [title]);
+
     return (
         <div>
-            <CharacterCard met={title}/>
+            <p>
+                {title}
+            </p>
         </div>
     );
 };
