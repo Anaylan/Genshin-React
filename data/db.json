@@ -1,18 +1,66 @@
 {
   "characters": [
     {
-      "title": "albedo",
       "id": 1,
+      "title": "albedo",
       "body": "Альбедо",
-      "src": "../../../assets/images/characters/Albedo/card.webp)",
+      "fullname": "Альбедо",
+      "birthday": "13 сентября",
+      "rar_src": "require('../../../assets/images/rarity/5_star.webp')",
+      "card_src": "require('../../../assets/images/characters/Albedo/card.webp')",
       "weapon_type": "sword",
       "rarity": "legendary",
-      "element": "geo"
+      "element": "geo",
+      "el_src": "require('../../../assets/images/elements/geo.webp')",
+      "el_name": "Гео",
+      "gender": "Мужской",
+      "sp_food": "«Лесной сон»",
+      "w_type": "Меч",
+      "constellation": "Меловой Принцепс",
+      "w_get": "Молитва",
+      "story": [
+        {
+          "id": 1,
+          "title": "История персонажа 1",
+          "body": "1"
+        },
+        {
+          "id": 2,
+          "title": "История персонажа 2",
+          "body": "2"
+        },
+        {
+          "id": 3,
+          "title": "История персонажа 3",
+          "body": "3"
+        },
+        {
+          "id": 4,
+          "title": "История персонажа 4",
+          "body": "4"
+        },
+        {
+          "id": 5,
+          "title": "История персонажа 5",
+          "body": "5"
+        },
+        {
+          "id": 6,
+          "title": "Рисунки Альбедо",
+          "body": "6"
+        },
+        {
+          "id": 7,
+          "title": "Глаз Бога",
+          "body": "7"
+        }
+      ]
     },
     {
       "id": 2,
       "title": "ayaka",
       "body": "Аяка",
+      "fullname": "Альбедо",
       "src": "../../../assets/images/characters/Ayaka/card.webp",
       "weapon_type": "sword",
       "rarity": "legendary",
@@ -22,6 +70,7 @@
       "id": 3,
       "title": "aloy",
       "body": "Элой",
+      "fullname": "Альбедо",
       "src": "../../../assets/images/characters/Aloy/card.webp",
       "weapon_type": "sword",
       "rarity": "legendary",
@@ -31,6 +80,7 @@
       "id": 4,
       "title": "amber",
       "body": "Эмбер",
+      "fullname": "Альбедо",
       "src": "../../../assets/images/characters/Amber/card.webp",
       "weapon_type": "sword",
       "rarity": "epic",
@@ -40,6 +90,7 @@
       "id": 5,
       "title": "barbara",
       "body": "Барбара",
+      "fullname": "Альбедо",
       "src": "../../../assets/images/characters/Barbara/card.webp",
       "weapon_type": "sword",
       "rarity": "epic",

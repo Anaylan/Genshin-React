@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/characterCard.css'
-import {Table} from "react-bootstrap";
+import {Image, Table} from "react-bootstrap";
 import {useParams} from "react-router-dom";
 const CharacterCard = (props) => {
 
@@ -8,7 +8,7 @@ const CharacterCard = (props) => {
         <aside className={`block bg-opacity-75 card-float border rounded-3 bg-light`}>
             <div className="myColor rounded-top border-bottom">
                 <h2 className="m-0  text-center">
-                    {props.met.title}
+                    
                 </h2>
             </div>
             <div className="border-bottom justify-content-center">
@@ -20,7 +20,7 @@ const CharacterCard = (props) => {
                         Полное имя
                     </td>
                     <td className={'w-50 font'}>
-                        {props.met.title}
+                        
                     </td>
                 </tr>
                 <tr>
@@ -28,7 +28,7 @@ const CharacterCard = (props) => {
                         Редкость
                     </td>
                     <td className={'w-50 font'}>
-                        {props.met.title}
+                        
                     </td>
                 </tr>
                 <tr>
@@ -36,7 +36,7 @@ const CharacterCard = (props) => {
                         Элемент
                     </td>
                     <td className={'w-50 font'}>
-                        {props.met.title}
+                        <Image src={props.character.rar_src} className={'w-100'}/>
                     </td>
                 </tr>
                 <tr>
@@ -44,7 +44,7 @@ const CharacterCard = (props) => {
                         Пол
                     </td>
                     <td className={'w-50 font'}>
-                        {props.met.title}
+                        
                     </td>
                 </tr>
                 <tr>
@@ -52,7 +52,7 @@ const CharacterCard = (props) => {
                         День рождения
                     </td>
                     <td className={'w-50 font'}>
-                        {props.met.title}
+                        
                     </td>
                 </tr>
                 <tr>
@@ -60,7 +60,7 @@ const CharacterCard = (props) => {
                         Особое блюдо
                     </td>
                     <td className={'w-50 font'}>
-                        {props.met.title}
+                        
                     </td>
                 </tr>
                 <tr>
@@ -68,7 +68,7 @@ const CharacterCard = (props) => {
                         Оружие
                     </td>
                     <td className={'w-50 font'}>
-                        {props.met.title}
+                        
                     </td>
                 </tr>
                 <tr>
@@ -76,7 +76,7 @@ const CharacterCard = (props) => {
                         Созвездие
                     </td>
                     <td className={'w-50 font'}>
-                        {props.met.title}
+                        
                     </td>
                 </tr>
                 <tr className={'border-bottom-0'}>
@@ -84,7 +84,7 @@ const CharacterCard = (props) => {
                         Как получить
                     </td>
                     <td className={'w-50 font border-bottom-0'}>
-                        {props.met.title}
+                        
                     </td>
                 </tr>
                 </tbody>

@@ -33,7 +33,7 @@ const AppRoute = () => {
                     <Route path="guides/:id" element={<Guide title='' />}/>
                     <Route path="wiki">
                         <Route path="characters" element={<Characters title='' />}/>
-                        <Route path="characters/:title" element={<Character/>}/>
+                        <Route path="characters/:id" element={<Character/>}/>
 
                         <Route path="weapons" element={<Weapons title='' />}/>
                         <Route path="weapons/:id" element={<Weapons title='' />}/>
