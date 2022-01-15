@@ -16,6 +16,11 @@ const Character = (props) => {
             .then(res => res.json())
             .then(data => setPost(data))
     }, [id]);
+useEffect(() => {
+        characters.map((character) => {
+character.id == id ? setPost(character): ;
+})
+    }, [id]);
     return (
         <>
             {post && (
