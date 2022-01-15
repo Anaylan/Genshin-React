@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
-import CharacterItem from "../components/elements/characterItem";
 import './../components/elements/css/characters.css';
+import CharacterList from "../components/elements/Characters/CharacterList";
+
 const Characters = (props) => {
 
     const [characters, setCharacter] = useState([])
-
     useEffect(() => {
         fetch('http://localhost:8000/characters')
             .then(res => res.json())
@@ -13,13 +12,12 @@ const Characters = (props) => {
     }, []);
     document.title = props.title;
     return (
-        <div id={'characters'}>
-            {characters.map((characters) =>
-                <Link key={characters.id} to={`/wiki/characters/${characters.id}`}>
-                    <CharacterItem character={characters}/>
-                </Link>)
-            }
-        </div>
+        <>
+            {characters.length !== 0
+                ? <CharacterList data={characters}/>
+                : <div>Ничего не найдено</div>}
+
+        </>
     );
 };
 

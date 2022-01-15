@@ -2,23 +2,21 @@
   "characters": [
     {
       "id": 1,
-      "title": "albedo",
+      "title": "Albedo",
       "body": "Альбедо",
       "fullname": "Альбедо",
       "birthday": "13 сентября",
-      "rar_src": "require('../../../assets/images/rarity/5_star.webp')",
-      "card_src": "require('../../../assets/images/characters/Albedo/card.webp')",
       "weapon_type": "sword",
       "rarity": "legendary",
       "element": "geo",
-      "el_src": "require('../../../assets/images/elements/geo.webp')",
       "el_name": "Гео",
       "gender": "Мужской",
       "sp_food": "«Лесной сон»",
       "w_type": "Меч",
       "constellation": "Меловой Принцепс",
       "w_get": "Молитва",
-      "story": [
+      "sp_stat": "Бонус Гео Урона",
+      "stories": [
         {
           "id": 1,
           "title": "История персонажа 1",
@@ -54,44 +52,108 @@
           "title": "Глаз Бога",
           "body": "7"
         }
+      ],
+      "stats": [
+        {
+          "id": 1,
+          "phase": 0,
+          "lvl_s": 1,
+          "lvl_e": 20,
+          "hp_s": 1030,
+          "hp_e": 2671,
+          "atk_s": 20,
+          "atk_e": 51,
+          "def_s": 68,
+          "def_e": 177,
+          "sp_s": 0,
+          "sp_e": 0,
+          "materials": [
+            {
+              "material": "",
+              "material-rar": "trash",
+              "number": "x1"
+            },
+            {
+              "material": "",
+              "material-rar": "trash",
+              "number": "x3"
+            },
+            {
+              "material": "",
+              "material-rar": "trash",
+              "number": "x3"
+            },
+            {
+              "material": "",
+              "material-rar": "rare",
+              "number": "x20000"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "История персонажа 2",
+          "body": "2"
+        },
+        {
+          "id": 3,
+          "title": "История персонажа 3",
+          "body": "3"
+        },
+        {
+          "id": 4,
+          "title": "История персонажа 4",
+          "body": "4"
+        },
+        {
+          "id": 5,
+          "title": "История персонажа 5",
+          "body": "5"
+        },
+        {
+          "id": 6,
+          "title": "Рисунки Альбедо",
+          "body": "6"
+        },
+        {
+          "id": 7,
+          "title": "Глаз Бога",
+          "body": "7"
+        }
       ]
     },
     {
       "id": 2,
-      "title": "ayaka",
+      "title": "Ayaka",
       "body": "Аяка",
       "fullname": "Альбедо",
-      "src": "../../../assets/images/characters/Ayaka/card.webp",
       "weapon_type": "sword",
       "rarity": "legendary",
       "element": "cryo"
     },
     {
       "id": 3,
-      "title": "aloy",
+      "title": "Aloy",
       "body": "Элой",
       "fullname": "Альбедо",
-      "src": "../../../assets/images/characters/Aloy/card.webp",
       "weapon_type": "sword",
       "rarity": "legendary",
       "element": "cryo"
     },
     {
       "id": 4,
-      "title": "amber",
+      "title": "Amber",
       "body": "Эмбер",
       "fullname": "Альбедо",
-      "src": "../../../assets/images/characters/Amber/card.webp",
       "weapon_type": "sword",
       "rarity": "epic",
       "element": "pyro"
     },
     {
       "id": 5,
-      "title": "barbara",
+      "title": "Barbara",
       "body": "Барбара",
       "fullname": "Альбедо",
-      "src": "../../../assets/images/characters/Barbara/card.webp",
       "weapon_type": "sword",
       "rarity": "epic",
       "element": "hydro"
