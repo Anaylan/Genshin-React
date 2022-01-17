@@ -1,23 +1,32 @@
 import React, {useEffect, useState} from 'react';
 import './../components/elements/css/characters.css';
-import CharacterList from "../components/elements/Characters/CharacterList";
+import {Link} from "react-router-dom";
+import CharacterItem from "../components/elements/characterItem";
+import axios from "axios";
 
 const Characters = (props) => {
 
     const [characters, setCharacter] = useState([])
     useEffect(() => {
-        fetch('http://localhost:8000/characters')
-            .then(res => res.json())
-            .then(data => setCharacter(data))
+        axios.get('http://localhost:8000/characters')
+            .then(response => {
+                setCharacter(response.data)
+            })
     }, []);
     document.title = props.title;
     return (
-        <>
+        <div id={'characters'}>
             {characters.length !== 0
-                ? <CharacterList data={characters}/>
+                ? <>
+                    {characters.map((characters) =>
+                        <Link key={characters.id} to={`/wiki/characters/${characters.id}`}>
+                            <CharacterItem character={characters}/>
+                        </Link>)
+                    }
+                </>
                 : <div>Ничего не найдено</div>}
 
-        </>
+        </div>
     );
 };
 

@@ -5,7 +5,7 @@ import {Image, Table} from "react-bootstrap";
 const CharacterCard = (props) => {
 
     return (
-        <aside className={`block bg-opacity-75 card-float border rounded-3 bg-light`}>
+        <aside className={`mb-3 block bg-opacity-75 card-float border rounded-3 bg-light`}>
             <div className="myColor rounded-top border-bottom">
                 <h2 className="m-0 py-1 text-center">
                     {props.character.body}
@@ -64,6 +64,7 @@ const CharacterCard = (props) => {
                         Особое блюдо
                     </td>
                     <td className={'w-50 font'}>
+                        <Image src={require(`../../assets/images/characters/${props.character.title}/special_food.webp`)}/>
                         {props.character.sp_food}
                     </td>
                 </tr>

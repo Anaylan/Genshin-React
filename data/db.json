@@ -65,60 +65,29 @@
           "atk_e": 51,
           "def_s": 68,
           "def_e": 177,
-          "sp_s": 0,
-          "sp_e": 0,
+          "sp_stat": "0%",
           "materials": [
             {
-              "material": "",
-              "material-rar": "trash",
+              "material": "prithiva topaz sliver",
+              "material_rar": "common",
               "number": "x1"
             },
             {
-              "material": "",
-              "material-rar": "trash",
+              "material": "cecilia",
+              "material_rar": "trash",
               "number": "x3"
             },
             {
-              "material": "",
-              "material-rar": "trash",
+              "material": "divining scroll",
+              "material_rar": "trash",
               "number": "x3"
             },
             {
-              "material": "",
-              "material-rar": "rare",
+              "material": "mora",
+              "material_rar": "rare",
               "number": "x20000"
             }
           ]
-        },
-        {
-          "id": 2,
-          "title": "История персонажа 2",
-          "body": "2"
-        },
-        {
-          "id": 3,
-          "title": "История персонажа 3",
-          "body": "3"
-        },
-        {
-          "id": 4,
-          "title": "История персонажа 4",
-          "body": "4"
-        },
-        {
-          "id": 5,
-          "title": "История персонажа 5",
-          "body": "5"
-        },
-        {
-          "id": 6,
-          "title": "Рисунки Альбедо",
-          "body": "6"
-        },
-        {
-          "id": 7,
-          "title": "Глаз Бога",
-          "body": "7"
         }
       ]
     },
