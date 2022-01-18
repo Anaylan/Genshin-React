@@ -1,15 +1,19 @@
-import {Image, NavLink} from "react-bootstrap";
+import {Image} from "react-bootstrap";
 import './css/Skills.css'
+
 export const SkillDesc = (props) => {
-    console.log(props)
     return (
         <>
-            <div>
-                {props.body}
+        {props.skill.map((describe) =>
+            <div key={describe.id}>
+                <p className={'h6 mb-0'}>{describe.title}</p>
+                <p className={'fs-8'}>{describe.body}</p>
             </div>
+        )}
 
-        </>
-    );
+</>
+)
+    ;
 };
 
 export const SkillItem = (props) => {

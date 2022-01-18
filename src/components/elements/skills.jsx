@@ -1,5 +1,11 @@
-const skills = () => {
-  return <div>123</div>;
-};
+export const SkillDesc = (props) => {
+  console.log(props)
+  return (
+      <>
+        <div>
+          {props.body}
+        </div>
 
-export default skills;
+      </>
+  );
+};

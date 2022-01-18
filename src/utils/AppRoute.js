@@ -4,21 +4,49 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import LayoutDefault from "../layouts/LayoutDefault";
 import {Spinner} from "react-bootstrap";
 
-const Home = lazy(() => import("../views/Home"));
-const Login = lazy(() => import("../views/Login"));
-const RequireAuth = lazy(() => import("../views/private/RequireAuth"));
-const Characters = lazy(() => import("../views/Characters"));
-const Guides = lazy(() => import("../views/Guides"));
-const Weapons = lazy(() => import("../views/Weapons"));
-const Artifacts = lazy(() => import("../views/Artifacts"));
-const About = lazy(() => import("../views/About"));
-const NotFound = lazy(() => import("../views/NotFound"));
-const CreatePost = lazy(() => import("../views/CreatePost"));
-const DeletePost = lazy(() => import("../views/DeletePost"));
+const Home = lazy(() => {
+    return import("../views/Home");
+});
+const Login = lazy(() => {
+    return import("../views/Login");
+});
+const RequireAuth = lazy(() => {
+    return import("../views/private/RequireAuth");
+});
+const Characters = lazy(() => {
+    return import("../views/Characters");
+});
+const Guides = lazy(() => {
+    return import("../views/Guides");
+});
+const Weapons = lazy(() => {
+    return import("../views/Weapons");
+});
+const Artifacts = lazy(() => {
+    return import("../views/Artifacts");
+});
+const About = lazy(() => {
+    return import("../views/About");
+});
+const NotFound = lazy(() => {
+    return import("../views/NotFound");
+});
+const CreatePost = lazy(() => {
+    return import("../views/CreatePost");
+});
+const DeletePost = lazy(() => {
+    return import("../views/DeletePost");
+});
 
-const Character = lazy(() => import("../views/Character"));
-const Guide = lazy(() => import("../views/Guide"));
-const Artifact = lazy(() => import("../views/Artifact"));
+const Character = lazy(() => {
+    return import("../views/Character");
+});
+const Guide = lazy(() => {
+    return import("../views/Guide");
+});
+const Artifact = lazy(() => {
+    return import("../views/Artifact");
+});
 
 
 const AppRoute = () => {
@@ -26,11 +54,12 @@ const AppRoute = () => {
     return (
 
         <Suspense fallback={
-            <div className={'w-100'}>
-                <Spinner className={'w-100'} animation="border" role="status">
+            <div className={'d-flex justify-content-center align-items-center h-100 mh-100'}>
+                <Spinner animation="border" role="status">
                     <span className="visually-hidden">Loading...</span>
                 </Spinner>
-            </div>}>
+            </div>
+        }>
             <Routes>
                 <Route path="/" element={<LayoutDefault/>}>
                     <Route index element={<Home title='Гайды | Genshin Easy'/>}/>
@@ -39,7 +68,7 @@ const AppRoute = () => {
                     <Route path="guides/:id" element={<Guide title=''/>}/>
                     <Route path="wiki">
                         <Route path="characters" element={<Characters title=''/>}/>
-                        <Route path="characters/:id" element={<Character/>}/>
+                        <Route path="characters/:title" element={<Character/>}/>
 
                         <Route path="weapons" element={<Weapons title=''/>}/>
                         <Route path="weapons/:id" element={<Weapons title=''/>}/>

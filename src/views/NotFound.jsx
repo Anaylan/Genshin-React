@@ -1,12 +1,15 @@
 import React from 'react';
+import {Spinner} from "react-bootstrap";
 
 const NotFound = (props) => {
     document.title = props.title;
 
     return (
-        <div>
-            Не найдено
-        </div>
+        <>
+            <div className={'d-flex justify-content-center align-self-center'}>
+                <h3>К сожалению данной страницы не существует</h3>
+            </div>
+        </>
     );
 };
 
