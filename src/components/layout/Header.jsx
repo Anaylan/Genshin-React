@@ -3,6 +3,7 @@ import {CloseButton, Navbar, Offcanvas,} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import {FaAlignJustify} from "react-icons/fa";
 import NavLinks from "./parts/NavLinks";
+import {NavLink} from "react-router-dom";
 
 
 function Header() {
@@ -17,7 +18,9 @@ function Header() {
                     <div className="container justify-content-between align-items-center">
                         <div>
                             <div className="navbar-brand align-items-center d-flex">
-                                Genshin Easy
+                                <NavLink className={'text-black'} to={'/'}>
+                                    Genshin Easy
+                                </NavLink>
                             </div>
                         </div>
                         <div id="navbarCollapse">
@@ -25,11 +28,13 @@ function Header() {
                         </div>
                     </div>
                 </Navbar>
-                <Navbar id="mobile_bar"  className={'d-lg-none d-block'}>
+                <Navbar id="mobile_bar" className={'d-lg-none d-block'}>
                     <div className="container-fluid justify-content-between align-items-center">
                         <div>
                             <div className="navbar-brand align-items-center d-flex">
-                                Genshin Easy
+                                <NavLink className={'text-black'} to={'/'}>
+                                    Genshin Easy
+                                </NavLink>
                             </div>
                         </div>
                         <Button
@@ -41,7 +46,7 @@ function Header() {
                         </Button>
                         <Offcanvas placement={"end"} show={show}>
                             <Offcanvas.Header>
-                                <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                                <Offcanvas.Title>Genshin Easy</Offcanvas.Title>
                                 <CloseButton onClick={handleClose}/>
                             </Offcanvas.Header>
                             <Offcanvas.Body>

@@ -20,8 +20,10 @@ export const SkillDesc = (props) => {
 export const SkillItem = (props) => {
     return (
         <>
+            <div className={'m-0 p-0 g-0 gap-0 text-center'}>
             <Image src={props.icon}
                    loading={"lazy"} className={'skill_icon'} width="45px" height={'45px'}/>
+            </div>
             <div className="w-75 mx-1">
                 {props.title}
             </div>

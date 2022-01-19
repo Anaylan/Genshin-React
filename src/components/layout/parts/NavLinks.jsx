@@ -20,13 +20,13 @@ const NavLinks = () => {
                     <Dropdown.Toggle variant={'link'} className={'nav-link align-items-center'}>База
                         знаний</Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <NavLink to={"/wiki/weapons"} className={'dropdown-item'}>
+                        <NavLink to={"/wiki/weapons"} className={'text-black dropdown-item'}>
                             Оружие
                         </NavLink>
-                        <NavLink to={"/wiki/characters"} className="dropdown-item">
+                        <NavLink to={"/wiki/characters"} className="text-black dropdown-item">
                             Персонажи
                         </NavLink>
-                        <NavLink to={"/wiki/artifacts"} className="dropdown-item">
+                        <NavLink to={"/wiki/artifacts"} className="text-black dropdown-item">
                             Артефакты
                         </NavLink>
                     </Dropdown.Menu>

@@ -10,15 +10,35 @@
 .nav-link {
   color: black;
 }
-.nav-pills .nav-link.active {
-  background-color: #2b69e9;
-  .skill_icon {
-    background: none!important;
-    border-radius: 0;
-    padding: 1px;
+
+.nav-pills {
+  .nav-item:first-child {
+    .nav-link {
+      border-top-left-radius: 0.25rem !important;
+      border-top-right-radius: 0.25rem !important;
+    }
+  }
+
+  .nav-item:last-child {
+    .nav-link {
+      border-bottom-left-radius: 0.25rem !important;
+      border-bottom-right-radius: 0.25rem !important;
+    }
+
+    .nav-link .active {
+      border-bottom-left-radius: 0.25rem !important;
+      border-bottom-right-radius: 0.25rem !important;
+    }
   }
 }
 
-.nav-pills {
+.nav-pills .nav-link.active {
+  background-color: #2b69e9;
 
+
+  .skill_icon {
+    background: none !important;
+    border-radius: 0;
+    padding: 1px;
+  }
 }

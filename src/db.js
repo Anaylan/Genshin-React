@@ -25,7 +25,7 @@ export const characters = [
             {
                 id: 2,
                 body: "Очень маленькое время отката элементальной способности, что позволяет переставить " +
-                    "'Цветок', если он был поставлен по ошибке"
+                    "«Цветок», если он был поставлен по ошибке"
             },
             {
                 id: 3,
@@ -202,6 +202,220 @@ export const characters = [
                         number: "x20000"
                     }
                 ]
+            },
+            {
+                id: 2,
+                phase: 1,
+                lvl_s: 20,
+                lvl_e: 40,
+                hp_s: 3554,
+                hp_e: 5317,
+                atk_s: 67,
+                atk_e: 101,
+                def_s: 235,
+                def_e: 352,
+                sp_stat: "0%",
+                materials: [
+                    {
+                        material: "prithiva topaz fragment",
+                        material_rar: "rare",
+                        number: "x3"
+                    },
+                    {
+                        material: "basalt pillar",
+                        material_rar: "epic",
+                        number: "x2"
+                    },
+                    {
+                        material: "cecilia",
+                        material_rar: "trash",
+                        number: "x10"
+                    },
+                    {
+                        material: "divining scroll",
+                        material_rar: "trash",
+                        number: "x15"
+                    },
+                    {
+                        material: "mora",
+                        material_rar: "rare",
+                        number: "x40000"
+                    }
+                ]
+            },
+            {
+                id: 3,
+                phase: 2,
+                lvl_s: 40,
+                lvl_e: 50,
+                hp_s: 5944,
+                hp_e: 6839,
+                atk_s: 113,
+                atk_e: 130,
+                def_s: 394,
+                def_e: 453,
+                sp_stat: "7.2%",
+                materials: [
+                    {
+                        material: "prithiva topaz fragment",
+                        material_rar: "rare",
+                        number: "x6"
+                    },
+                    {
+                        material: "basalt pillar",
+                        material_rar: "epic",
+                        number: "x4"
+                    },
+                    {
+                        material: "cecilia",
+                        material_rar: "trash",
+                        number: "x20"
+                    },
+                    {
+                        material: "sealed scroll",
+                        material_rar: "common",
+                        number: "x12"
+                    },
+                    {
+                        material: "mora",
+                        material_rar: "rare",
+                        number: "x60000"
+                    }
+                ]
+            },
+            {
+                id: 4,
+                phase: 3,
+                lvl_s: 50,
+                lvl_e: 60,
+                hp_s: 7675,
+                hp_e: 8579,
+                atk_s: 146,
+                atk_e: 163,
+                def_s: 508,
+                def_e: 568,
+                sp_stat: "14.4%",
+                materials: [
+                    {
+                        material: "prithiva topaz chunk",
+                        material_rar: "epic",
+                        number: "x3"
+                    },
+                    {
+                        material: "basalt pillar",
+                        material_rar: "epic",
+                        number: "x8"
+                    },
+                    {
+                        material: "cecilia",
+                        material_rar: "trash",
+                        number: "x30"
+                    },
+                    {
+                        material: "sealed scroll",
+                        material_rar: "common",
+                        number: "x18"
+                    },
+                    {
+                        material: "mora",
+                        material_rar: "rare",
+                        number: "x80000"
+                    }
+                ]
+            },
+            {
+                id: 5,
+                phase: 4,
+                lvl_s: 60,
+                lvl_e: 70,
+                hp_s: 9207,
+                hp_e: 10119,
+                atk_s: 175,
+                atk_e: 192,
+                def_s: 610,
+                def_e: 670,
+                sp_stat: "14.4%",
+                materials: [
+                    {
+                        material: "prithiva topaz chunk",
+                        material_rar: "epic",
+                        number: "x6"
+                    },
+                    {
+                        material: "basalt pillar",
+                        material_rar: "epic",
+                        number: "x12"
+                    },
+                    {
+                        material: "cecilia",
+                        material_rar: "trash",
+                        number: "x45"
+                    },
+                    {
+                        material: "forbidden curse scroll",
+                        material_rar: "rare",
+                        number: "x12"
+                    },
+                    {
+                        material: "mora",
+                        material_rar: "rare",
+                        number: "x100000"
+                    }
+                ]
+            },
+            {
+                id: 6,
+                phase: 5,
+                lvl_s: 70,
+                lvl_e: 80,
+                hp_s: 10746,
+                hp_e: 11669,
+                atk_s: 204,
+                atk_e: 222,
+                def_s: 712,
+                def_e: 773,
+                sp_stat: "21.6%",
+                materials: [
+                    {
+                        material: "prithiva topaz gemstone",
+                        material_rar: "legendary",
+                        number: "x6"
+                    },
+                    {
+                        material: "basalt pillar",
+                        material_rar: "epic",
+                        number: "x20"
+                    },
+                    {
+                        material: "cecilia",
+                        material_rar: "trash",
+                        number: "x60"
+                    },
+                    {
+                        material: "forbidden curse scroll",
+                        material_rar: "rare",
+                        number: "x24"
+                    },
+                    {
+                        material: "mora",
+                        material_rar: "rare",
+                        number: "x120000"
+                    }
+                ]
+            },
+            {
+                id: 7,
+                phase: 6,
+                lvl_s: 80,
+                lvl_e: 90,
+                hp_s: 12296,
+                hp_e: 13226,
+                atk_s: 233,
+                atk_e: 251,
+                def_s: 815,
+                def_e: 876,
+                sp_stat: "28.8%",
+                materials: []
             }
         ],
         skills: [
@@ -209,7 +423,7 @@ export const characters = [
                 id: 1,
                 tab_id: "first",
                 title: "Фехтовальный стиль Фавония: Мел",
-                icon: require(`./assets/images/characters/Albedo/attacks.png`),
+                icon: require(`./assets/images/characters/Albedo/attacks.webp`),
                 body: [
                     {
                         title: 'Обычная атака:',
@@ -231,7 +445,7 @@ export const characters = [
                 id: 2,
                 tab_id: "second",
                 title: "Абиогенез: Цветок солнца",
-                icon: require(`./assets/images/characters/Albedo/skill.png`),
+                icon: require(`./assets/images/characters/Albedo/skill.webp`),
                 body: [
                     {
                         title: 'С помощью алхимии Альбедо создаёт Цветок солнца, который наносит Гео урон по площади.',
@@ -269,7 +483,7 @@ export const characters = [
                 id: 3,
                 tab_id: "third",
                 title: "Ритуал рождения: Тектоническая волна",
-                icon: require(`./assets/images/characters/Albedo/burst.png`),
+                icon: require(`./assets/images/characters/Albedo/burst.webp`),
                 body: [
                     {
                         title: 'Альбедо выпускает перед собой Гео кристаллы, которые взрываются и наносят Гео урон по площади.',
@@ -292,7 +506,7 @@ export const characters = [
                 id: 4,
                 tab_id: "fourth",
                 title: "Превосходство кальцита",
-                icon: require(`./assets/images/characters/Albedo/burst.png`),
+                icon: require(`./assets/images/characters/Albedo/passive_talent_1.webp`),
                 body: [
                     {
                         title: 'Увеличивает урон Цветков мимолётности навыка Абиогенез: Цветок солнца по противникам с HP ниже 50% на 25%.',
@@ -300,7 +514,131 @@ export const characters = [
                     }
                 ],
 
+            },
+            {
+                id: 5,
+                tab_id: "fifth",
+                title: "Гомункулярная природа",
+                icon: require(`./assets/images/characters/Albedo/passive_talent_2.webp`),
+                body: [
+                    {
+                        title: 'Активация навыка Ритуал рождения: Тектоническая волна увеличивает мастерство ' +
+                            'стихий ближайших членов отряда на 125 ед. в течение 10 сек.'
+                    }
+                ],
+
+            },
+            {
+                id: 6,
+                tab_id: "sixth",
+                title: "Вспышка гениальности",
+                icon: require(`./assets/images/characters/Albedo/passive_talent_3.webp`),
+                body: [
+                    {
+                        title: 'При создании материалов возвышения оружия имеет 10% шанс создать ' +
+                            'дополнительный предмет.'
+                    }
+                ],
+
             }
-        ]
+        ],
+        constellations: [
+            {
+                id: 1,
+                tab_id: "first",
+                title: "Цветок эдема",
+                icon: require(`./assets/images/characters/Albedo/const_1.webp`),
+                body: [
+                    {
+                        title: 'Цветки мимолётности, сгенерированные навыком Альбедо Абогинез: Цветок солнца, ' +
+                            'восстанавливают 1.2 ед. энергии Альбедо.'
+                    }
+                ]
+            },
+            {
+                id: 2,
+                tab_id: "second",
+                title: "Открытие фанерозоя",
+                icon: require(`./assets/images/characters/Albedo/const_2.webp`),
+                body: [
+                    {
+                        title: 'Цветки мимолётности, сгенерированные навыком Абогинез: Цветок солнца, на 30 сек. ' +
+                            'наделяют Альбедо Роковым расчётом:',
+                    }
+                ],
+                list: [
+                    {
+                        id: 1,
+                        item: 'Активация навыка Ритуал рождения: Тектоническая волна снимает эффект Рокового расчёта и, ' +
+                            'в зависимости от снятых уровней эффекта, увеличивает урон от взрыва навыка Ритуал ' +
+                            'рождения: Тектоническая волна и урон Цветков неизбежности.'
+                    },
+                    {
+                        id: 2,
+                        item: 'Каждый уровень Рокового расчёта увеличивает урон на 30% от защиты Альбедо.'
+                    },
+                    {
+                        id: 3,
+                        item: 'Этот эффект может складываться до 4 раз.'
+                    }
+                ]
+            },
+            {
+                id: 3,
+                tab_id: "third",
+                title: "Милость Гелиоса",
+                icon: require(`./assets/images/characters/Albedo/const_3.webp`),
+                body: [
+                    {
+                        title: 'Увеличивает уровень навыка Абогинез: Цветок солнца на 3.',
+                        body: 'Макс. Ур.: 15.'
+                    },
+                    {
+                        title: ''
+                    }
+                ],
+            },
+            {
+                id: 4,
+                tab_id: "fourth",
+                title: "Сошествие духовности",
+                icon: require(`./assets/images/characters/Albedo/const_4.webp`),
+                body: [
+                    {
+                        title: 'Увеличивает урон атаки в падении активных членов отряда в области Цветка солнца на 30%.',
+                        body: ''
+                    }
+                ]
+            },
+            {
+                id: 5,
+                tab_id: "fifth",
+                title: "Прилив катархея",
+                icon: require(`./assets/images/characters/Albedo/const_5.webp`),
+                body: [
+                    {
+                        title: 'Увеличивает уровень навыка Ритуал рождения: Тектоническая волна на 3.',
+                        body: 'Макс. Ур.: 15.'
+                    },
+                    {
+                        title: ''
+                    }
+                ],
+
+            },
+            {
+                id: 6,
+                tab_id: "sixth",
+                title: "Грандиозность Цисин",
+                icon: require(`./assets/images/characters/Albedo/const_6.webp`),
+                body: [
+                    {
+                        title: 'Увеличивает урон активных членов отряда в области Цветка солнца, находящихся под ' +
+                            'эффектом щита реакции Кристалл, на 17%.'
+                    }
+                ],
+
+            }
+        ],
     }
 ]
