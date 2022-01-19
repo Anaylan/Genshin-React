@@ -1,14 +1,15 @@
-import React from 'react';
+import YouTube from "react-youtube";
 
 const YoutubeVideo = (props) => {
-    console.log(props)
     return (
-        <div>
-            {/*<iframe width="100%" height="315" src={props.video.link}*/}
-            {/*        title="YouTube video player" frameBorder="0"*/}
-            {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
-            {/*        allowFullScreen></iframe>*/}
-        </div>
+        <>
+            {
+                props.video ?
+                    <div className={'w-100 pb-1'}>
+                        <YouTube videoId={props.video} className={'w-100 hstack'} loading={"lazy"}/>
+                    </div> : <></>
+            }
+        </>
     );
 };
 

@@ -1,18 +1,24 @@
 .skill_icon {
   background: gray;
   border-radius: 40px;
-  padding: 3px;
+  padding: 4px;
+  transition: .1s ease-in;
+  outline: none;
 }
 
-.skill_icon:active {
-  background: none;
-  border-radius: 40px;
-  padding: 3px;
-}
 
 .nav-link {
   color: black;
 }
 .nav-pills .nav-link.active {
   background-color: #2b69e9;
+  .skill_icon {
+    background: none!important;
+    border-radius: 0;
+    padding: 1px;
+  }
+}
+
+.nav-pills {
+
 }

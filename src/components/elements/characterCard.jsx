@@ -18,7 +18,7 @@ const CharacterCard = (props) => {
             <Table className={'mb-0 fs-6'}>
                 <tbody>
                 <tr>
-                    <td className={'w-50 font vertical-center text-end'}>
+                    <td className={'w-50 font vertical-center'}>
                         Полное имя
                     </td>
                     <td className={'w-50 font vertical-center'}>
@@ -26,7 +26,7 @@ const CharacterCard = (props) => {
                     </td>
                 </tr>
                 <tr>
-                    <td className={'w-50 font vertical-center text-end'}>
+                    <td className={'w-50 font vertical-center'}>
                         Редкость
                     </td>
                     <td className={'w-50 font vertical-center'}>
@@ -34,7 +34,7 @@ const CharacterCard = (props) => {
                     </td>
                 </tr>
                 <tr>
-                    <td className={'w-50 font vertical-center text-end'}>
+                    <td className={'w-50 font vertical-center'}>
                         Элемент
                     </td>
                     <td className={'w-50 font vertical-center'}>

@@ -1,1 +1,2 @@
-.skill_icon{background:gray;border-radius:40px;padding:3px}.skill_icon:active{background:none;border-radius:40px;padding:3px}.nav-link{color:black}.nav-pills .nav-link.active{background-color:#2b69e9}
+.skill_icon{background:gray;border-radius:40px;padding:4px;-webkit-transition:0.1s ease-in;transition:0.1s ease-in;outline:none}.nav-link{color:black}.nav-pills .nav-link.active{background-color:#2b69e9}.nav-pills .nav-link.active .skill_icon{background:none!important;border-radius:0;padding:1px}
+/*# sourceMappingURL=Skills.css.map */

@@ -8,6 +8,7 @@ export const SkillDesc = (props) => {
             <div key={describe.id}>
                 <p className={'h6 mb-0'}>{describe.title}</p>
                 <p className={'fs-8'}>{describe.body}</p>
+
             </div>
         )}
 
