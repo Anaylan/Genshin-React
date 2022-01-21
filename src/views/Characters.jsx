@@ -7,28 +7,52 @@ import PostService from "../API/PostService";
 const Characters = (props) => {
 
         const [characters, setCharacter] = useState([])
-        // useEffect(() => {
-        //     fetchCharacters()
-        //         .then(response => setCharacter(response))
-        // }, []);
+        const [filtered, setFiltered] = useState('')
+
+
         useEffect(() => {
             fetchCharacter()
                 .then(response => setCharacter(response));
         }, []);
 
-        async function fetchCharacters() {
-            const item = await PostService.getAllCharacters();
-            return item;
-        }
 
         async function fetchCharacter() {
             const items = await PostService.getAllCharacter();
             return items;
         }
 
-        document.title = props.title;
+        const filter = (sort) => {
+            // characters.map((character) => {
+            //     if (character.element == e.target.name) {
+            //         setFiltered(character)
+            //         setCharacter([...characters].sort((a, b) => a[e.target.name].localeCompare(b[e.target.name])
+            //         ));
+            //     }
+            //
+            // })
+            console.log(sort);
+            setFiltered(sort);
+            setCharacter([...characters].sort((a, b) => a[sort].localeCompare(b[sort])));
+
+        }
+
+        function f() {
+            console.log(filtered)
+        }
+
         return (
             <>
+
+                {/*<Button onClick={f}/>*/}
+                {/*<MyFilter*/}
+                {/*    value={filtered}*/}
+                {/*    options={[*/}
+                {/*    {name: 'geo', value: 'geo'},*/}
+                {/*    {name: 'cryo', value: 'cryo'}*/}
+                {/*]}*/}
+                {/*onClick={filter}/>*/}
+
+
                 {characters.length !== 0
                     ? <div id={'characters'}>
                         {characters.map((character) =>

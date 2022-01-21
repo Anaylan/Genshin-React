@@ -55,7 +55,7 @@ const AppRoute = () => {
 
         <Suspense fallback={
             <div className={'d-flex justify-content-center align-items-center h-100 mh-100'}>
-                <Spinner animation="border" role="status">
+                <Spinner  variant={"primary"}animation="border" role="status">
                     <span className="visually-hidden">Loading...</span>
                 </Spinner>
             </div>

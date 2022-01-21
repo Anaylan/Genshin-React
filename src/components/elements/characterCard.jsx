@@ -64,7 +64,7 @@ const CharacterCard = (props) => {
                         Особое блюдо
                     </td>
                     <td className={'w-50 font vertical-center'}>
-                        <Image src={require(`../../assets/images/characters/${props.character.title}/special_food.webp`)}
+                        <Image src={props.character.sp_food_im}
                         width={'60px'}/>
                         {/*{props.character.sp_food}*/}
                     </td>

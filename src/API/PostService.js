@@ -1,18 +1,10 @@
-import axios from "axios";
-import response from "../db";
+// import axios from "axios";
+// import response from "../characters";
 
 export default class PostService {
-    // static async getAllCharacters() {
-    //     try {
-    //         const response = await axios.get('http://localhost:8000/characters');
-    //         return response.data;
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
     static async getAllCharacter() {
         try {
-            const response = require('../db');
+            const response = require('../data/characters');
             return response.characters;
         } catch (error) {
             console.log(error);
@@ -21,7 +13,7 @@ export default class PostService {
 
     static async getCharacterItem(title) {
         try {
-            const response = require('../db');
+            const response = require('../data/characters');
             console.log(title)
             response.characters.map((character) => {
                 console.log(character.title)

@@ -6,6 +6,7 @@ import CharacterCard from "../components/elements/characterCard";
 import {SkillDesc, SkillItem} from "../components/elements/Skill";
 import YoutubeVideo from "../components/elements/YoutubeVideo";
 import StatsElement from "../components/elements/StatsElement";
+import WeaponItem from "../components/elements/WeaponItem";
 
 const Character = () => {
     const {title} = useParams()
@@ -15,7 +16,7 @@ const Character = () => {
     }, [title]);
 
     function fetchCharacter() {
-        const response = require('../db');
+        const response = require('../data/characters');
         response.characters.map((character) => {
             if (title === character.title) {
                 setPost(character);
@@ -24,6 +25,7 @@ const Character = () => {
         })
     }
 
+    document.title = title;
     return (
         <>
             {post && (
@@ -88,9 +90,9 @@ const Character = () => {
                     </div>
                     <div className='mb-4'>
                         <h2>Таланты</h2>
-                        <Row className='justify-content-center d-flex overflow-hidden m-1 bg-transparent'>
+                        <Row className='justify-content-center d-flex overflow-hidden m-1 bg-transparent w-100'>
                             <Tab.Container id="skills" defaultActiveKey="first">
-                                <Col xs={10} md={5} sm={10} lg={4} xl={4} className={'mb-3 px-4'}>
+                                <Col xs={10} md={5} sm={10} lg={4} xl={4} className={'mb-3 px-0 pr-4'}>
                                     <Nav variant="pills"
                                          className={"fs-7 shadow h-auto rounded bg-white flex-column g-0 gap-0 border-0 p-0 m-0"}>
                                         {post.skills.map((skill) =>
@@ -130,14 +132,13 @@ const Character = () => {
                                 </Col>
 
                             </Tab.Container>
-
                         </Row>
                     </div>
                     <div className='mb-4'>
                         <h2>Созвездия</h2>
-                        <Row className='justify-content-center d-flex overflow-hidden m-1 bg-transparent'>
+                        <Row className='justify-content-center d-flex overflow-hidden m-1 bg-transparent w-100'>
                             <Tab.Container id="skills" defaultActiveKey="first">
-                                <Col xs={10} md={5} sm={10} lg={4} xl={4} className={'mb-3 px-4'}>
+                                <Col xs={10} md={5} sm={10} lg={4} xl={4} className={'mb-3 px-0 pr-4'}>
                                     <Nav variant="pills"
                                          className={"w-100 fs-7 shadow h-auto rounded bg-white flex-column g-0 gap-0 border-0 p-0 m-0"}>
                                         {post.constellations.map((constellation) =>
@@ -182,16 +183,28 @@ const Character = () => {
                         <h2>Рекомендуемые билды</h2>
                         <div className='bg-transparent rounded'>
                             <div className='container-lg justify-content-center container-fluid p-3'>
-                                <Tabs defaultActiveKey="home" id="builds"
-                                      className="border-0 d-flex justify-content-center">
-                                    <Tab eventKey="home" title="Home">
-                                        <Row className={'bg-white rounded border'}>
-                                            <Col className={'py-3'}>
-                                                12312312
-                                                1234
-                                            </Col>
-                                        </Row>
-                                    </Tab>
+                                <Tabs defaultActiveKey="build_1" id="builds"
+                                      className="border-0 d-flex justify-content-center flex-nowrap">
+                                    {post.builds.map((build) =>
+                                        <Tab eventKey={build.key} title={build.title}>
+                                            <Row className={'bg-white rounded border py-3'}>
+                                                <>
+                                                    <Col>
+                                                        123
+                                                    </Col>
+                                                    <Col id={'weapons'}>
+
+                                                        {build.weapons.map((item) =>
+                                                            <>
+                                                                <WeaponItem weapon={item}/>
+                                                            </>
+                                                        )}
+                                                    </Col>
+                                                </>
+
+                                            </Row>
+                                        </Tab>
+                                    )}
                                     <Tab eventKey="1" title="Home">
                                         <Row className={'bg-white rounded border'}>
                                             <Col className={'py-3'}>
@@ -205,14 +218,6 @@ const Character = () => {
                                             <Col className={'py-3'}>
                                                 12312312
                                                 1234asd
-                                            </Col>
-                                        </Row>
-                                    </Tab>
-                                    <Tab eventKey="13" title="Home">
-                                        <Row className={'bg-white rounded border'}>
-                                            <Col className={'py-3'}>
-                                                12312312
-                                                1234ddsf
                                             </Col>
                                         </Row>
                                     </Tab>

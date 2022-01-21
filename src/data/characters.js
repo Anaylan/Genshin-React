@@ -11,7 +11,7 @@ export const characters = [
         el_name: "Гео",
         gender: "Мужской",
         sp_food: "«Лесной сон»",
-        sp_food_im: require('./assets/images/characters/Albedo/special_food.webp'),
+        sp_food_im: require('../assets/images/characters/Albedo/special_food.webp'),
         w_type: "Меч",
         constellation: "Меловой Принцепс",
         w_get: "Молитва",
@@ -424,7 +424,7 @@ export const characters = [
                 id: 1,
                 tab_id: "first",
                 title: "Фехтовальный стиль Фавония: Мел",
-                icon: require(`./assets/images/characters/Albedo/attacks.webp`),
+                icon: require(`../assets/images/characters/Albedo/attacks.webp`),
                 body: [
                     {
                         title: 'Обычная атака:',
@@ -446,7 +446,7 @@ export const characters = [
                 id: 2,
                 tab_id: "second",
                 title: "Абиогенез: Цветок солнца",
-                icon: require(`./assets/images/characters/Albedo/skill.webp`),
+                icon: require(`../assets/images/characters/Albedo/skill.webp`),
                 body: [
                     {
                         title: 'С помощью алхимии Альбедо создаёт Цветок солнца, который наносит Гео урон по площади.',
@@ -484,7 +484,7 @@ export const characters = [
                 id: 3,
                 tab_id: "third",
                 title: "Ритуал рождения: Тектоническая волна",
-                icon: require(`./assets/images/characters/Albedo/burst.webp`),
+                icon: require(`../assets/images/characters/Albedo/burst.webp`),
                 body: [
                     {
                         title: 'Альбедо выпускает перед собой Гео кристаллы, которые взрываются и наносят Гео урон по площади.',
@@ -507,7 +507,7 @@ export const characters = [
                 id: 4,
                 tab_id: "fourth",
                 title: "Превосходство кальцита",
-                icon: require(`./assets/images/characters/Albedo/passive_talent_1.webp`),
+                icon: require(`../assets/images/characters/Albedo/passive_talent_1.webp`),
                 body: [
                     {
                         title: 'Увеличивает урон Цветков мимолётности навыка Абиогенез: Цветок солнца по противникам с HP ниже 50% на 25%.',
@@ -520,7 +520,7 @@ export const characters = [
                 id: 5,
                 tab_id: "fifth",
                 title: "Гомункулярная природа",
-                icon: require(`./assets/images/characters/Albedo/passive_talent_2.webp`),
+                icon: require(`../assets/images/characters/Albedo/passive_talent_2.webp`),
                 body: [
                     {
                         title: 'Активация навыка Ритуал рождения: Тектоническая волна увеличивает мастерство ' +
@@ -533,7 +533,7 @@ export const characters = [
                 id: 6,
                 tab_id: "sixth",
                 title: "Вспышка гениальности",
-                icon: require(`./assets/images/characters/Albedo/passive_talent_3.webp`),
+                icon: require(`../assets/images/characters/Albedo/passive_talent_3.webp`),
                 body: [
                     {
                         title: 'При создании материалов возвышения оружия имеет 10% шанс создать ' +
@@ -548,7 +548,7 @@ export const characters = [
                 id: 1,
                 tab_id: "first",
                 title: "Цветок эдема",
-                icon: require(`./assets/images/characters/Albedo/const_1.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_1.webp`),
                 body: [
                     {
                         title: 'Цветки мимолётности, сгенерированные навыком Альбедо Абогинез: Цветок солнца, ' +
@@ -560,7 +560,7 @@ export const characters = [
                 id: 2,
                 tab_id: "second",
                 title: "Открытие фанерозоя",
-                icon: require(`./assets/images/characters/Albedo/const_2.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_2.webp`),
                 body: [
                     {
                         title: 'Цветки мимолётности, сгенерированные навыком Абогинез: Цветок солнца, на 30 сек. ' +
@@ -588,7 +588,7 @@ export const characters = [
                 id: 3,
                 tab_id: "third",
                 title: "Милость Гелиоса",
-                icon: require(`./assets/images/characters/Albedo/const_3.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_3.webp`),
                 body: [
                     {
                         title: 'Увеличивает уровень навыка Абогинез: Цветок солнца на 3.',
@@ -603,7 +603,7 @@ export const characters = [
                 id: 4,
                 tab_id: "fourth",
                 title: "Сошествие духовности",
-                icon: require(`./assets/images/characters/Albedo/const_4.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_4.webp`),
                 body: [
                     {
                         title: 'Увеличивает урон атаки в падении активных членов отряда в области Цветка солнца на 30%.',
@@ -615,7 +615,7 @@ export const characters = [
                 id: 5,
                 tab_id: "fifth",
                 title: "Прилив катархея",
-                icon: require(`./assets/images/characters/Albedo/const_5.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_5.webp`),
                 body: [
                     {
                         title: 'Увеличивает уровень навыка Ритуал рождения: Тектоническая волна на 3.',
@@ -631,7 +631,7 @@ export const characters = [
                 id: 6,
                 tab_id: "sixth",
                 title: "Грандиозность Цисин",
-                icon: require(`./assets/images/characters/Albedo/const_6.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_6.webp`),
                 body: [
                     {
                         title: 'Увеличивает урон активных членов отряда в области Цветка солнца, находящихся под ' +
@@ -644,17 +644,58 @@ export const characters = [
         builds: [
             {
                 id: 1,
-                title: "defafult",
+                title: "Собственный гео урон",
                 key: 'build_1',
+                description: 'Билд был создан, для того, чтобы максимизировать гео урон самого Альбедо.',
                 weapons: [
                     {
                         id: 1,
-                        link:'cinnabar_spindle',
-                        body:'Киноварное веретено',
-                        rarity:'epic',
+                        link: 'cinnabar_spindle',
+                        body: 'Киноварное веретено',
+                        rarity: 'epic',
+                        type: 'sword'
+                    },
+                    {
+                        id: 2,
+                        link: 'primordial_jade_cutter',
+                        body: 'Драгоценный омут',
+                        rarity: 'legendary',
+                        type: 'sword'
+                    },
+                    {
+                        id: 3,
+                        link: 'harbinger_of_dawn',
+                        body: 'Предвестник зари',
+                        rarity: 'rare',
+                        type: 'sword'
+                    },
+                    {
+                        id: 4,
+                        link: 'festering_desire',
+                        body: 'Оскверненное желание',
+                        rarity: 'epic',
+                        type: 'sword'
+                    },
+                    {
+                        id: 5,
+                        link: 'freedom_sworn',
+                        body: 'Клятва свободы',
+                        rarity: 'legendary',
                         type: 'sword'
                     }
                 ],
+                teams: [
+                    {
+                        id: 1,
+                        units: [
+                            {
+                                id: 1,
+                                title: 'Ayaka',
+                                body: 'Аяка'
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -1082,7 +1123,7 @@ export const characters = [
                 id: 1,
                 tab_id: "first",
                 title: "Фехтовальный стиль Фавония: Мел",
-                icon: require(`./assets/images/characters/Albedo/attacks.webp`),
+                icon: require(`../assets/images/characters/Albedo/attacks.webp`),
                 body: [
                     {
                         title: 'Обычная атака:',
@@ -1104,7 +1145,7 @@ export const characters = [
                 id: 2,
                 tab_id: "second",
                 title: "Абиогенез: Цветок солнца",
-                icon: require(`./assets/images/characters/Albedo/skill.webp`),
+                icon: require(`../assets/images/characters/Albedo/skill.webp`),
                 body: [
                     {
                         title: 'С помощью алхимии Альбедо создаёт Цветок солнца, который наносит Гео урон по площади.',
@@ -1142,7 +1183,7 @@ export const characters = [
                 id: 3,
                 tab_id: "third",
                 title: "Ритуал рождения: Тектоническая волна",
-                icon: require(`./assets/images/characters/Albedo/burst.webp`),
+                icon: require(`../assets/images/characters/Albedo/burst.webp`),
                 body: [
                     {
                         title: 'Альбедо выпускает перед собой Гео кристаллы, которые взрываются и наносят Гео урон по площади.',
@@ -1165,7 +1206,7 @@ export const characters = [
                 id: 4,
                 tab_id: "fourth",
                 title: "Превосходство кальцита",
-                icon: require(`./assets/images/characters/Albedo/passive_talent_1.webp`),
+                icon: require(`../assets/images/characters/Albedo/passive_talent_1.webp`),
                 body: [
                     {
                         title: 'Увеличивает урон Цветков мимолётности навыка Абиогенез: Цветок солнца по противникам с HP ниже 50% на 25%.',
@@ -1178,7 +1219,7 @@ export const characters = [
                 id: 5,
                 tab_id: "fifth",
                 title: "Гомункулярная природа",
-                icon: require(`./assets/images/characters/Albedo/passive_talent_2.webp`),
+                icon: require(`../assets/images/characters/Albedo/passive_talent_2.webp`),
                 body: [
                     {
                         title: 'Активация навыка Ритуал рождения: Тектоническая волна увеличивает мастерство ' +
@@ -1191,7 +1232,7 @@ export const characters = [
                 id: 6,
                 tab_id: "sixth",
                 title: "Вспышка гениальности",
-                icon: require(`./assets/images/characters/Albedo/passive_talent_3.webp`),
+                icon: require(`../assets/images/characters/Albedo/passive_talent_3.webp`),
                 body: [
                     {
                         title: 'При создании материалов возвышения оружия имеет 10% шанс создать ' +
@@ -1206,7 +1247,7 @@ export const characters = [
                 id: 1,
                 tab_id: "first",
                 title: "Цветок эдема",
-                icon: require(`./assets/images/characters/Albedo/const_1.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_1.webp`),
                 body: [
                     {
                         title: 'Цветки мимолётности, сгенерированные навыком Альбедо Абогинез: Цветок солнца, ' +
@@ -1218,7 +1259,7 @@ export const characters = [
                 id: 2,
                 tab_id: "second",
                 title: "Открытие фанерозоя",
-                icon: require(`./assets/images/characters/Albedo/const_2.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_2.webp`),
                 body: [
                     {
                         title: 'Цветки мимолётности, сгенерированные навыком Абогинез: Цветок солнца, на 30 сек. ' +
@@ -1246,7 +1287,7 @@ export const characters = [
                 id: 3,
                 tab_id: "third",
                 title: "Милость Гелиоса",
-                icon: require(`./assets/images/characters/Albedo/const_3.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_3.webp`),
                 body: [
                     {
                         title: 'Увеличивает уровень навыка Абогинез: Цветок солнца на 3.',
@@ -1261,7 +1302,7 @@ export const characters = [
                 id: 4,
                 tab_id: "fourth",
                 title: "Сошествие духовности",
-                icon: require(`./assets/images/characters/Albedo/const_4.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_4.webp`),
                 body: [
                     {
                         title: 'Увеличивает урон атаки в падении активных членов отряда в области Цветка солнца на 30%.',
@@ -1273,7 +1314,7 @@ export const characters = [
                 id: 5,
                 tab_id: "fifth",
                 title: "Прилив катархея",
-                icon: require(`./assets/images/characters/Albedo/const_5.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_5.webp`),
                 body: [
                     {
                         title: 'Увеличивает уровень навыка Ритуал рождения: Тектоническая волна на 3.',
@@ -1289,7 +1330,7 @@ export const characters = [
                 id: 6,
                 tab_id: "sixth",
                 title: "Грандиозность Цисин",
-                icon: require(`./assets/images/characters/Albedo/const_6.webp`),
+                icon: require(`../assets/images/characters/Albedo/const_6.webp`),
                 body: [
                     {
                         title: 'Увеличивает урон активных членов отряда в области Цветка солнца, находящихся под ' +
