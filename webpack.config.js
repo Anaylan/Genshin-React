@@ -1,27 +1,34 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: "./src/index.js", // входная точка - исходный файл
-    output:{
-        path: path.resolve(__dirname, './static'),     // путь к каталогу выходных файлов - папка static
-        publicPath: '/public/',
-        filename: "[name].[bundle].js"       // название создаваемого файла
+    mode: "development",
+    output: {
+        path: path.join(__dirname, '/dist'),
+        filename: 'index.bundle.js',
     },
     devServer: {
-        historyApiFallback: true,
-        port: 8081,
-        open: true
+        port: 3010,
+        watchContentBase: true,
     },
-    module:{
-        rules:[   //загрузчик для jsx
+    module: {
+        rules: [
             {
-                test: /\.jsx|js$/, // определяем тип файлов
-                exclude: /node_modules/,  // исключаем из обработки папку node_modules
-                loader: "babel-loader",   // определяем загрузчик
-                options:{
-                    presets:["@babel/preset-env", "@babel/preset-react"]    // используемые плагины
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
                 }
+            },
+            {
+                test: /\.(scss|ccs)$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader',
+                ],
             }
         ]
-    }
-}
+    },
+    plugins: [new MiniCssExtractPlugin()],
+};

@@ -684,16 +684,11 @@ export const characters = [
                         type: 'sword'
                     }
                 ],
-                teams: [
+                team: [
                     {
                         id: 1,
-                        units: [
-                            {
-                                id: 1,
-                                title: 'Ayaka',
-                                body: 'Аяка'
-                            }
-                        ]
+                        title: 'Ayaka',
+                        body: 'Аяка'
                     }
                 ]
             }

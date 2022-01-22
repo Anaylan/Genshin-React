@@ -3,6 +3,7 @@ import './../components/elements/css/characters.css';
 import {Link} from "react-router-dom";
 import CharacterItem from "../components/elements/characterItem";
 import PostService from "../API/PostService";
+import {nameApp} from "../App";
 
 const Characters = (props) => {
 
@@ -14,7 +15,7 @@ const Characters = (props) => {
             fetchCharacter()
                 .then(response => setCharacter(response));
         }, []);
-
+        document.title = 'Персонажи | ' + nameApp;
 
         async function fetchCharacter() {
             const items = await PostService.getAllCharacter();

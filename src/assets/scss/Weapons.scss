@@ -51,22 +51,6 @@
       padding: 3px;
     }
   }
-
-  @media (min-width: 993px) {
-    grid-template-columns: repeat(5, minmax(18%, 20%));
-  }
-  @media (max-width: 992px) {
-    grid-template-columns: repeat(4, minmax(22%, 25%));
-  }
-  @media (max-width: 750px) {
-    grid-template-columns: repeat(3, minmax(29%, 33.3%));
-  }
-  @media (max-width: 480px) {
-    grid-template-columns: repeat(2, minmax(45%, 50%));
-  }
-  @media (max-width: 350px) {
-    grid-template-columns: repeat(1, minmax(45%, 50%));
-  }
 }
 .fs-9 {
   font-size: 10pt;

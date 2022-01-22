@@ -1,31 +1,39 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AppRoute from "./utils/AppRoute";
-import ReactGA from 'react-ga';
-import ym, {YMInitializer} from "react-yandex-metrika";
-// import * as url from "url";
+import ReactGA from "react-ga";
+import { YMInitializer } from "react-yandex-metrika";
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
-ReactGA.initialize(process.env.REACT_APP_GA_CODE_DEV);
-const name = '| Genshin Easy'
-// ym(86969082, 'init', {
-//     defer: true,
-//     clickmap: true,
-//     trackLinks: true,
-//     accurateTrackBounce: true
-// })
-// let options;
+export const nameApp = "Genshin Easy";
 
-export const initGA = () => {
-    ReactGA.initialize('UA-215831491-1'); // put your tracking id here
-}
+ReactGA.initialize("UA-215831491-1");
+const trackPage = (page) => {
+	ReactGA.set({ page });
+	ReactGA.pageview(page);
+};
 
 function App() {
-    return (
-        <>
-            <AppRoute/>
-            <YMInitializer accounts={[86969082]} options={{webvisor: true}} version="2"/>
-        </>
-    );
+	const childRef = useRef();
+	let location = useLocation();
+	useEffect(() => {
+		const page = location.pathname;
+		document.body.classList.add("loaded");
+		// childRef.current.init()
+		trackPage(page);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [location]);
+	return (
+		<>
+			<AppRoute />
+			<YMInitializer
+				accounts={[86969082]}
+				options={{ webvisor: true }}
+				version='2'
+			/>
+		</>
+	);
 }
 
 export default App;
