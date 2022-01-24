@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const NotFound = (props) => {
-    document.title = props.title;
+const NotFound = () => {
+	document.title = "Страница не найдена";
 
-    return (
-        <>
-            <div className={'d-flex justify-content-center align-self-center'}>
-                <h3>К сожалению данной страницы не существует</h3>
-            </div>
-        </>
-    );
+	return (
+		<>
+			<div className={"d-flex justify-content-center align-self-center"}>
+				<h3>К сожалению данной страницы не существует</h3>
+			</div>
+		</>
+	);
 };
 
 export default NotFound;

@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AppRoute from "./utils/AppRoute";
 import ReactGA from "react-ga";
 import { YMInitializer } from "react-yandex-metrika";
+
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -22,14 +23,20 @@ function App() {
 		document.body.classList.add("loaded");
 		// childRef.current.init()
 		trackPage(page);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [location]);
 	return (
 		<>
 			<AppRoute />
 			<YMInitializer
 				accounts={[86969082]}
-				options={{ webvisor: true }}
+				options={{
+					webvisor: true,
+					defer: true,
+					clickmap: true,
+					trackLinks: true,
+					accurateTrackBounce: true,
+					webvisor: true,
+				}}
 				version='2'
 			/>
 		</>

@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import CharacterItem from "../components/elements/characterItem";
-import guide from "./Guide";
 import Guide from "./Guide";
 
-const Guides = (props) => {
+const Guides = () => {
     const [guides, setGuide] = useState([]);
-    document.title = props.title;
+    document.title = 'Гайды | Genshin Easy';
     return (
         <>
             {guides.length !== 0

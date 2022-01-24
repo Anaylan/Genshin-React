@@ -16,11 +16,11 @@ export default class PostService {
             const response = require('../data/characters');
             console.log(title)
             response.characters.map((character) => {
-                console.log(character.title)
-                if (title == character.title) {
-                    return character;
-                }
-            })
+                    console.log(character.title);
+                    if (title === character.title) {
+                        return character;
+                    }
+                })
 
         } catch (error) {
             console.log(error);

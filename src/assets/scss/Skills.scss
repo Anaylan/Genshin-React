@@ -35,6 +35,12 @@
   }
 }
 
+.nav-link:hover {
+  .skill_icon {
+    transform: scale(105%);
+  }
+}
+
 .nav-pills .nav-link.active {
   background-color: #2b69e9;
 

@@ -24,18 +24,18 @@ const StatsElement = (props) => {
                 <td className={'border-gray border vertical-center p-1 fs-6'} rowSpan={2}>
                     {props.stats.sp_stat}
                 </td>
-                <td className={'border-gray border-top vertical-center p-1 w-45'} rowSpan={2}>
+                <td className={'border-gray border-top vertical-center p-1'} rowSpan={2}>
                     <div
                         className={"d-flex justify-content-center gap-2 vertical-center align-items-center flex-wrap"}>
                         {props.stats.materials.map((item) =>
-                            <div key={item.id} className={"item d-flex align-items-center"}>
+                            <div key={item.material} className={"item d-flex align-items-center"}>
                                 <Image
                                     src={require(`../../assets/images/materials/${item.material}.webp`)}
                                     alt={item.material}
                                     className={`${item.material_rar} border rounded p-1`} loading={"lazy"}
                                     height={"35px"}
-                                    key={item.id}/>
-                                <p className={'m-0'} key={item.id}>{item.number}</p>
+                                    />
+                                <p className={'m-0'}>{item.number}</p>
                             </div>
                         )}
                     </div>

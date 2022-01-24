@@ -57,20 +57,20 @@ const AppRoute = () => {
 			}>
 			<Routes>
 				<Route path='/' element={<LayoutDefault />}>
-					<Route index element={<Home title='Гайды | Genshin Easy' />} />
-					<Route path='guides' element={<Guides title='' />} />
-					<Route path='guides/:id' element={<Guide title='' />} />
+					<Route index element={<Home />} />
+					<Route path='guides' element={<Guides />} />
+					<Route path='guides/:id' element={<Guide />} />
 					<Route path='wiki'>
-						<Route path='characters' element={<Characters title='' />} />
+						<Route path='characters' element={<Characters />} />
 						<Route path='characters/:title' element={<Character />} />
 
-						<Route path='weapons' element={<Weapons title='' />} />
-						<Route path='weapons/:id' element={<Weapons title='' />} />
+						<Route path='weapons' element={<Weapons />} />
+						<Route path='weapons/:id' element={<Weapons />} />
 
-						<Route path='artifacts' element={<Artifacts title='' />} />
-						<Route path='artifacts/:id' element={<Artifact title='' />} />
+						<Route path='artifacts' element={<Artifacts />} />
+						<Route path='artifacts/:id' element={<Artifact />} />
 					</Route>
-					<Route path='about' element={<About title=' ' />} />
+					<Route path='about' element={<About />} />
 					<Route path='404' element={<NotFound />} />
 					<Route path='*' element={<Navigate replace to={"/404"} />} />
 				</Route>
