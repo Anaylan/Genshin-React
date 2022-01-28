@@ -1,10 +1,9 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import {Spinner} from "react-bootstrap";
 
 const Main = () => {
     return (
-        <main id="page" className={"bg-white bg-opacity-75 border shadow rounded-top mt-lg-4 container-lg container-fluid p-3"}>
+        <main id="page" className={"bg-white bg-opacity-75 border shadow myrounded mt-lg-4 container-lg container-fluid p-3"}>
                 <Outlet />
         </main>
     );

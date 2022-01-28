@@ -12,18 +12,23 @@ const Home = lazy(() => {
 const Characters = lazy(() => {
 	return import("../views/Characters");
 });
+
 const Guides = lazy(() => {
 	return import("../views/Guides");
 });
+
 const Weapons = lazy(() => {
 	return import("../views/Weapons");
 });
+
 const Artifacts = lazy(() => {
 	return import("../views/Artifacts");
 });
+
 const About = lazy(() => {
 	return import("../views/About");
 });
+
 const NotFound = lazy(() => {
 	return import("../views/NotFound");
 });
@@ -31,15 +36,21 @@ const NotFound = lazy(() => {
 const Character = lazy(() => {
 	return import("../views/Character");
 });
+
 const Guide = lazy(() => {
 	return import("../views/Guide");
 });
+
 const Artifact = lazy(() => {
 	return import("../views/Artifact");
 });
 
+const Banner = lazy(() => {
+	return import("../views/Banner");
+});
+
 export const initGA = () => {
-	ReactGA.initialize("UA-215831491-1"); // put your tracking id here
+	ReactGA.initialize("UA-215831491-1");
 };
 
 const AppRoute = () => {
@@ -63,7 +74,7 @@ const AppRoute = () => {
 					<Route path='wiki'>
 						<Route path='characters' element={<Characters />} />
 						<Route path='characters/:title' element={<Character />} />
-
+						<Route path='banners/:title' element={<Banner />} />
 						<Route path='weapons' element={<Weapons />} />
 						<Route path='weapons/:id' element={<Weapons />} />
 

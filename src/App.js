@@ -34,8 +34,7 @@ function App() {
 					defer: true,
 					clickmap: true,
 					trackLinks: true,
-					accurateTrackBounce: true,
-					webvisor: true,
+					accurateTrackBounce: true
 				}}
 				version='2'
 			/>

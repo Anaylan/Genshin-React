@@ -10,6 +10,14 @@ export default class PostService {
             console.log(error);
         }
     }
+    static async getHome() {
+        try {
+            const response = require('../data/home');
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     static async getCharacterItem(title) {
         try {

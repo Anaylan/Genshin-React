@@ -581,7 +581,7 @@ export const characters = [
 							"восстанавливают 1.2 ед. энергии Альбедо.",
 					},
 				],
-                list: []
+				list: [],
 			},
 			{
 				id: "second",
@@ -624,7 +624,7 @@ export const characters = [
 						body: "Макс. Ур.: 15.",
 					},
 				],
-                list: []
+				list: [],
 			},
 			{
 				id: "fourth",
@@ -638,7 +638,7 @@ export const characters = [
 						body: "",
 					},
 				],
-                list: []
+				list: [],
 			},
 			{
 				id: "fifth",
@@ -652,9 +652,9 @@ export const characters = [
 						body: "Макс. Ур.: 15.",
 					},
 				],
-                list: []
+				list: [],
 			},
-            
+
 			{
 				id: "sixth",
 				title: "Грандиозность Цисин",
@@ -667,20 +667,28 @@ export const characters = [
 							"эффектом щита реакции Кристалл, на 17%.",
 					},
 				],
-                list: []
+				list: [],
 			},
 		],
 		builds: [
 			{
 				id: 1,
-				title: "Гео урон",
+				title: "Дамагер",
 				key: "build_1",
 				description:
-					"Цель билда состоит в том, чтобы добиться максимального урона от элементального навыка Альбедо или же его взрыва стихий.",
+					"Целью этого билда является, увеличение урона Альбедо до максимальных значений. В этом билде большую часть урона " +
+					"Альбедо наносит своим элементальным навыком, так что его мы прокачиваем в первую очередь. Так как с 'руки' мы в " +
+					"этом билде не бьём, то можно игнорировать прокачку обычных атак. Взрыв стихий прокачивается по желанию.",
 				weapons: [
 					{
 						link: "cinnabar_spindle",
 						body: "Киноварное веретено",
+						rarity: "epic",
+						type: "sword",
+					},
+					{
+						link: "festering_desire",
+						body: "Оскверненное желание",
 						rarity: "epic",
 						type: "sword",
 					},
@@ -694,12 +702,6 @@ export const characters = [
 						link: "harbinger_of_dawn",
 						body: "Предвестник зари",
 						rarity: "rare",
-						type: "sword",
-					},
-					{
-						link: "festering_desire",
-						body: "Оскверненное желание",
-						rarity: "epic",
 						type: "sword",
 					},
 					{
@@ -738,30 +740,37 @@ export const characters = [
 				],
 				priority: [
 					{
-						name: 'clock',
-						stat_1: 'Защита%',
-						stat_2: 'АТК%'
+						name: "clock",
+						stat_1: "Защита%",
+						stat_2: "",
 					},
 					{
-						name: 'cup',
-						stat_1: 'Бонус гео урона',
-						stat_2: ''
+						name: "cup",
+						stat_1: "Бонус гео урона",
+						stat_2: "",
 					},
 					{
-						name: 'crown',
-						stat_1: 'Крит.урон%',
-						stat_2: 'Крит.шанс%'
-					}
-				]
+						name: "crown",
+						stat_1: "Крит.урон%",
+						stat_2: "Крит.шанс%",
+					},
+				],
 			},
 			{
 				id: 2,
-				title: "Бафф команды",
+				title: "Саппорт",
 				key: "build_2",
 				description:
-					"Цель билда состоит в том, чтобы команда получила максимальный бафф от самого Альбедо. путём использованиия «пассивки» оружия, «сетов» артефактов. " +
-					"",
+					"Целью этого билда является, увеличение урона команды до максимальных значений. В этом билде Альбедо играет роль саппорта, " +
+					"поэтому нам нужно использовать взрыв стихий как можно чаще, чтобы 'заливать' мастерство стихий команде. " +
+					"В этом билде мы прокачиваем элементальный навык и взрыв стихий в первую очередь. Обычные атаки можем игнорировать.",
 				weapons: [
+					{
+						link: "freedom_sworn",
+						body: "Клятва свободы",
+						rarity: "legendary",
+						type: "sword",
+					},
 					{
 						link: "cinnabar_spindle",
 						body: "Киноварное веретено",
@@ -775,68 +784,66 @@ export const characters = [
 						type: "sword",
 					},
 					{
-						link: "harbinger_of_dawn",
-						body: "Предвестник зари",
-						rarity: "rare",
-						type: "sword",
-					},
-					{
 						link: "festering_desire",
 						body: "Оскверненное желание",
 						rarity: "epic",
 						type: "sword",
 					},
 					{
-						link: "freedom_sworn",
-						body: "Клятва свободы",
-						rarity: "legendary",
+						link: "harbinger_of_dawn",
+						body: "Предвестник зари",
+						rarity: "rare",
 						type: "sword",
 					},
+
+
 				],
 				artifacts: [
-					{
-						title: "husk_of_opulent_dreams",
-						rarity: "legendary",
-						body: "Кокон сладких грёз",
-					},
 					{
 						title: "tenacity_of_the_millelith",
 						rarity: "legendary",
 						body: "Стойкость Миллелита",
 					},
 					{
-						title: "archaic_petra",
+						title: "noblesse_oblige",
 						rarity: "legendary",
-						body: "Архаичный камень",
-					},
-					{
-						title: "berserker",
-						rarity: "epic",
-						body: "Берсерк",
+						body: "Церемония древней знати",
 					},
 					{
 						title: "instructor",
 						rarity: "epic",
 						body: "Инструктор",
 					},
+					{
+						title: "archaic_petra",
+						rarity: "legendary",
+						body: "Архаичный камень",
+					},
+
+					{
+						title: "berserker",
+						rarity: "epic",
+						body: "Берсерк",
+					},
+					
 				],
 				priority: [
 					{
-						name: 'clock',
-						stat_1: 'Защита%',
-						stat_2: ''
+						name: "clock",
+						stat_1: "Защита%",
+						stat_2: "",
 					},
 					{
-						name: 'cup',
-						stat_1: 'Бонус гео урона',
-						stat_2: ''
+						name: "cup",
+						stat_1: "Бонус гео урона",
+						stat_2: "",
 					},
 					{
-						name: 'crown',
-						stat_1: 'Крит.урон%',
-						stat_2: 'Крит.шанс%'
-					}
-				]
+						name: "crown",
+						stat_1: "Крит.урон%",
+						stat_2: "Крит.шанс%",
+					},
+				],
 			},
 		],
 	},

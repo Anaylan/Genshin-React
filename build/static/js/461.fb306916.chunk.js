@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkpublic_html=self.webpackChunkpublic_html||[]).push([[461],{461:function(t,e,u){u.r(e);u(9867);var l=u(2834);e.default=function(t){return document.title=t.title,(0,l.jsx)("div",{children:"\u041e \u043d\u0430\u0441"})}}}]);
-//# sourceMappingURL=461.fb306916.chunk.js.map

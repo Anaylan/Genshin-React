@@ -43,15 +43,19 @@ const BuildsSection = (props) => {
 						spaceBetween={20}
 						breakpoints={{
 							300: {
+								spaceBetween: 10,
 								slidesPerView: 2,
 							},
 							400: {
+								spaceBetween: 10,
 								slidesPerView: 3,
 							},
 							510: {
+								spaceBetween: 15,
 								slidesPerView: 4,
 							},
 							670: {
+								spaceBetween: 20,
 								slidesPerView: 5,
 							},
 						}}

@@ -10,9 +10,12 @@
   font-family: "Genshin Impact" !important;
   box-sizing: border-box;
 }
-
+.myrounded {
+  border-top-left-radius: 0.25rem!important;
+  border-top-right-radius: 0.25rem!important;
+}
 @media (max-width: 991px) {
-  .rounded-top {
+  .myrounded {
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
   }

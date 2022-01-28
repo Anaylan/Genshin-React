@@ -11,10 +11,12 @@ import {
 	Table,
 	Tabs,
 } from "react-bootstrap";
+import YouTube from "react-youtube";
+
+// Import custom components
 import StoryItem from "../components/elements/StoryItem";
 import CharacterCard from "../components/elements/characterCard";
 import { SkillDesc, SkillItem } from "../components/elements/Skill";
-import YoutubeVideo from "../components/elements/YoutubeVideo";
 import StatsElement from "../components/elements/StatsElement";
 import { nameApp } from "../App";
 import PostService from "../API/PostService";
@@ -26,20 +28,9 @@ import BuildsSection from "../components/elements/BuildsSection";
 const Character = () => {
 	const { title } = useParams();
 	const [post, setPost] = useState(null);
-	// useEffect(() => {
-	// 	async function fetchCharacter() {
-	// 		const response = require("../data/characters");
-	// 		response.characters.map((character) => {
-	// 			if (title === character.title) {
-	// 				setPost(character);
-	// 			}
-	// 		});
-	// 	}
-	// 	fetchCharacter();
-	// }, [title]);
 	useEffect(() => {
 		fetchCharacter();
-	}, [title]);
+	},[title]);
 
 	async function fetchCharacter() {
 		const items = await PostService.getAllCharacter();
@@ -58,7 +49,6 @@ const Character = () => {
 		} catch (error) {
 			console.log(error);
 		}
-
 	});
 	try {
 		return (
@@ -169,7 +159,7 @@ const Character = () => {
 										sm={10}
 										lg={4}
 										xl={4}
-										className={"mb-3 px-0 pr-4"}>
+										className={"mb-3"}>
 										<Nav
 											variant='pills'
 											className={
@@ -212,7 +202,17 @@ const Character = () => {
 													) : (
 														<></>
 													)}
-													<YoutubeVideo video={skill.link} />
+													<div className={"w-100 pb-1"}>
+														{skill.link ? (
+															<YouTube
+																videoId={skill.link}
+																className={"w-100 hstack"}
+																loading={"lazy"}
+															/>
+														) : (
+															<></>
+														)}
+													</div>
 												</Tab.Pane>
 											))}
 										</Tab.Content>
@@ -230,7 +230,7 @@ const Character = () => {
 										sm={10}
 										lg={4}
 										xl={4}
-										className={"mb-3 px-0 pr-4"}>
+										className={"mb-3"}>
 										<Nav
 											variant='pills'
 											className={

@@ -16,6 +16,21 @@ const NavLinks = () => {
                 </NavLink>
             </li> */}
 			<li className='nav-item'>
+				<NavLink to='/wiki/artifacts' className='nav-link'>
+					Артефакты
+				</NavLink>
+			</li>
+			<li className='nav-item'>
+				<NavLink to='/wiki/weapons' className='nav-link'>
+					Оружие
+				</NavLink>
+			</li>
+			<li className='nav-item'>
+				<NavLink to='/wiki/characters' className='nav-link'>
+					Персонажи
+				</NavLink>
+			</li>
+			{/* <li className='nav-item'>
 				<Dropdown>
 					<Dropdown.Toggle
 						variant={"link"}
@@ -34,7 +49,7 @@ const NavLinks = () => {
 						</NavLink>
 					</Dropdown.Menu>
 				</Dropdown>
-			</li>
+			</li> */}
 			<li className='nav-item'>
 				<NavLink to='/about' className='nav-link'>
 					О нас
