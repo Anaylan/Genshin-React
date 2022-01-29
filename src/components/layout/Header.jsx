@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {CloseButton, Navbar, Offcanvas,} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import {FaAlignJustify} from "react-icons/fa";
+import {MdMenu} from "react-icons/md";
 import NavLinks from "./parts/NavLinks";
 import {NavLink} from "react-router-dom";
 
@@ -11,14 +11,15 @@ function Header() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     return (
         <React.Fragment>
-            <header className="position-sticky fixed-top bg-white border" id="header">
-                <Navbar id="main_bar" className={'d-lg-block d-none'}>
+            <header className='position-sticky fixed-top bg-white border' id="header">
+                <Navbar id='main_bar' className='d-lg-block d-none'>
                     <div className="container justify-content-between align-items-center">
                         <div>
                             <div className="navbar-brand align-items-center d-flex">
-                                <NavLink className={'text-black'} to={'/'}>
+                                <NavLink className='text-black' to='/'>
                                     Genshin Easy
                                 </NavLink>
                             </div>
@@ -28,23 +29,24 @@ function Header() {
                         </div>
                     </div>
                 </Navbar>
-                <Navbar id="mobile_bar" className={'d-lg-none d-block'}>
+                <Navbar id="mobile_bar" className='d-lg-none d-block'>
                     <div className="container-fluid justify-content-between align-items-center">
                         <div>
                             <div className="navbar-brand align-items-center d-flex">
-                                <NavLink className={'text-black'} to={'/'}>
+                                <NavLink className='text-black' to='/'>
                                     Genshin Easy
                                 </NavLink>
                             </div>
                         </div>
                         <Button
                             variant={"light"}
-                            className="border-1 border-dark bg-white"
+                            className="border-1 border-secondary bg-white"
                             onClick={handleShow}
                         >
-                            <FaAlignJustify/>
+                            <MdMenu size={'20px'}/>
                         </Button>
-                        <Offcanvas placement={"end"} show={show}>
+                        <Offcanvas onHide={handleClose} scroll={true} autoFocus={true} onEscapeKeyDown={handleClose}
+                                   placement={"end"} show={show}>
                             <Offcanvas.Header>
                                 <Offcanvas.Title>Genshin Easy</Offcanvas.Title>
                                 <CloseButton onClick={handleClose}/>

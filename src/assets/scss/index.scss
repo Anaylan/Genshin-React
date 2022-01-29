@@ -1,7 +1,5 @@
 @font-face {
   font-family: "Genshin Impact";
-  font-style: normal;
-  font-weight: normal;
   src: url('./assets/fonts/genshin_impact.woff2') format("woff2");
   font-display: swap;
 }
@@ -10,10 +8,12 @@
   font-family: "Genshin Impact" !important;
   box-sizing: border-box;
 }
+
 .myrounded {
-  border-top-left-radius: 0.25rem!important;
-  border-top-right-radius: 0.25rem!important;
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
 }
+
 @media (max-width: 991px) {
   .myrounded {
     border-top-left-radius: 0 !important;

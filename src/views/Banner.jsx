@@ -15,7 +15,7 @@ export default function Banner() {
 	} catch (error) {
 		return (
 			<div className={"d-flex h-100 justify-content-center align-self-center"}>
-				<p className='h3'>К сожалению данная страница находится в разработке</p>
+				<p className='h3 text-center'>К сожалению данная страница находится в разработке</p>
 			</div>
 		);
 	}

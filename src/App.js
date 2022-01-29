@@ -32,9 +32,9 @@ function App() {
 				options={{
 					webvisor: true,
 					defer: true,
+					accurateTrackBounce:true,
 					clickmap: true,
-					trackLinks: true,
-					accurateTrackBounce: true
+					trackLinks: true
 				}}
 				version='2'
 			/>

@@ -6,7 +6,7 @@ const NavLinks = () => {
 	return (
 		<ul className='navbar-nav mr-auto mb-0'>
 			<li className='nav-item'>
-				<NavLink to='/' className='nav-link'>
+				<NavLink to='/' className='nav-link link-dark'>
 					Главная
 				</NavLink>
 			</li>
@@ -16,17 +16,17 @@ const NavLinks = () => {
                 </NavLink>
             </li> */}
 			<li className='nav-item'>
-				<NavLink to='/wiki/artifacts' className='nav-link'>
+				<NavLink to='/wiki/artifacts' className='nav-link link-dark'>
 					Артефакты
 				</NavLink>
 			</li>
 			<li className='nav-item'>
-				<NavLink to='/wiki/weapons' className='nav-link'>
+				<NavLink to='/wiki/weapons' className='nav-link link-dark'>
 					Оружие
 				</NavLink>
 			</li>
 			<li className='nav-item'>
-				<NavLink to='/wiki/characters' className='nav-link'>
+				<NavLink to='/wiki/characters' className='nav-link link-dark'>
 					Персонажи
 				</NavLink>
 			</li>
@@ -50,11 +50,11 @@ const NavLinks = () => {
 					</Dropdown.Menu>
 				</Dropdown>
 			</li> */}
-			<li className='nav-item'>
-				<NavLink to='/about' className='nav-link'>
-					О нас
-				</NavLink>
-			</li>
+			{/*<li className='nav-item'>*/}
+			{/*	<NavLink to='/about' className='nav-link'>*/}
+			{/*		О нас*/}
+			{/*	</NavLink>*/}
+			{/*</li>*/}
 		</ul>
 	);
 };

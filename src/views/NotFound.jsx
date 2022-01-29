@@ -6,7 +6,7 @@ const NotFound = () => {
 	return (
 		<>
 			<div className={"d-flex justify-content-center align-self-center"}>
-				<h3>К сожалению данной страницы не существует</h3>
+				<h3 className='text-center'>К сожалению данной страницы не существует</h3>
 			</div>
 		</>
 	);
