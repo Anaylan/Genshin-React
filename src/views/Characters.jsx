@@ -15,7 +15,7 @@ const Characters = () => {
     }, []);
 
     async function fetchCharacter() {
-        return await PostService.getAllCharacter();
+        return await PostService.getAllCharactersCard();
     }
 
     return (

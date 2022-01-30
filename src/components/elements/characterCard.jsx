@@ -12,7 +12,6 @@ const CharacterCard = (props) => {
 			</div>
 			<div className='border-bottom d-flex justify-content-center m-0'>
 				<Image
-					loading={"lazy"}
 					src={require(`../../assets/images/characters/${props.character.title}/face.webp`)}
 					className={"h-auto"}
 				/>
@@ -29,7 +28,6 @@ const CharacterCard = (props) => {
 						<td className={"w-50 font vertical-center"}>Редкость</td>
 						<td className={"w-50 font vertical-center"}>
 							<Image
-								loading={"lazy"}
 								src={require(`../../assets/images/rarity/${props.character.rarity}.webp`)}
 							/>
 						</td>
@@ -38,7 +36,6 @@ const CharacterCard = (props) => {
 						<td className={"w-50 font vertical-center"}>Элемент</td>
 						<td className={"w-50 font vertical-center"}>
 							<Image
-								loading={"lazy"}
 								src={require(`../../assets/images/elements/${props.character.element}.webp`)}
 								width={"25px"}
 							/>

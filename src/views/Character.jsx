@@ -27,14 +27,13 @@ const Character = () => {
     }, [title]);
 
     async function fetchCharacter() {
-        const items = await PostService.getAllCharacter();
+        const items = await PostService.getAllCharacters();
         items.map((item) => {
             if (item.title === title) {
                 return setPost(item);
             }
         });
     }
-
     try {
         return (
             <>
@@ -144,7 +143,7 @@ const Character = () => {
                                                 }>
                                                 {post.sp_stat}
                                             </td>
-                                            <td className={"w-45 vertical-center p-1"}>
+                                            <td className={"w-405 vertical-center p-1"}>
                                                 Материалы для возвышения
                                             </td>
                                         </tr>
@@ -178,7 +177,7 @@ const Character = () => {
                                                     <Nav.Item key={skill.id}>
                                                         <Nav.Link
                                                             className={
-                                                                "w-100 border-start border-end border-top rounded-0 list-item d-flex align-items-center"
+                                                                "w-auto border-start border-end border-top rounded-0 list-item d-flex align-items-center"
                                                             }
                                                             eventKey={skill.id}>
                                                             <SkillItem
