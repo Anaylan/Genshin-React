@@ -14,6 +14,8 @@ export default class PostService {
                 item.id = character.id;
                 item.title = character.title;
                 item.body = character.body;
+                item.element = character.element;
+                item.weapon_type = character.weapon_type;
                 item.rarity = character.rarity;
                 items.push(item)
             })

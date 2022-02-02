@@ -11,9 +11,9 @@ const Characters = () => {
     document.title = "Персонажи | " + nameApp;
     useEffect(() => {
         fetchCharacter().then((response) => setCharacter(response));
-        characters.sort((a, b) => a.body.localeCompare(b.body));
-    }, []);
 
+    }, [characters]);
+    characters.sort((a, b) => a.body.localeCompare(b.body));
     async function fetchCharacter() {
         return await PostService.getAllCharactersCard();
     }

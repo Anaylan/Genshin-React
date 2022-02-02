@@ -37,29 +37,16 @@ const Character = () => {
     try {
         return (
             <>
+                <Helmet>
+                    <title>
+                        {post.body} | {nameApp}
+                    </title>
+                    <meta name='description' content={post.describe}/>
+                    <meta name='keywords' content=''/>
+                </Helmet>
                 {post && (
                     <>
-                        <Helmet>
-                            <html prefix={`og:https://genshin-easy.ru/wiki/characters/${title}`}/>
-                            <title>
-                                {post.body} | {nameApp}
-                            </title>
-                            <meta name='description' content={post.describe}/>
-                            <meta name='keywords' content=''/>
-                            <meta property="og:title" content={`Как прокачать ${post.body} в Genshin Impact?`}/>
-                            <meta
-                                property='og:url'
-                                content={`https://www.genshin-easy.ru/wiki/characters/${title}`}
-                            />
-                            <meta
-                                property='og:image'
-                                content={require(`../assets/images/characters/${title}/card.webp`)}
-                            />
-                            <meta
-                                property='og:description'
-                                content={`Еще не прокачали ${post.body} в Genshin Impact, тогда вам к нам`}
-                            />
-                        </Helmet>
+
 
                         <div className={"text-justify"}>
                             <CharacterCard character={post}/>

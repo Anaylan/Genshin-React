@@ -27,35 +27,19 @@ const Home = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Путеводитель по Тейвату | Genshin Easy</title>
+                <meta name="description"
+                      content="Genshin Easy - Полезные гайды и инструменты для путешественников по миру игры Genshin Impact, а также еженедельные обновления гайдов."/>
+                <meta name="keywords" content='гайды, genshin, impact, ивенты, мероприятия, молитвы,
+							guide, guides, гайд, геншин, импакт'/>
+            </Helmet>
             {post.length !== 0 ? (
                 <>
-                    <Helmet>
-                        <html prefix={`og:https://genshin-easy.ru/`}/>
-                        <meta property="og:title" content={`Путеводитель по миру Genshin Impact`}/>
-                        <meta
-                            property='og:url'
-                            content={`https://www.genshin-easy.ru/`}
-                        />
-                        <meta
-                            property='og:image'
-                            content={require('../assets/images/backround.webp')}
-                        />
-                        <meta
-                            property='og:image:width'
-                            content={1200}
-                        />
-                        <meta
-                            property='og:description'
-                            content={`Подробное описание всех персонажей, оружий, артефактов, на сайте genshin-easy.ru`}
-                        />
-                        <title>Путеводитель по Тейвату | Genshin Easy</title>
-                        <meta name="description"
-                              content="Genshin Easy - Полезные гайды и инструменты для путешественников по миру игры Genshin Impact, а также еженедельные обновления гайдов."/>
-                        <meta name="keywords" content='гайды, genshin, impact, ивенты, мероприятия, молитвы,
-							guide, guides, гайд, геншин, импакт'/>
-                    </Helmet>
+
                     <div className='mb-0'>
                         <p className='h5'>Молитвы</p>
+
                         <Banner info={post.wishes}/>
                     </div>
                     <div className='mb-2'>

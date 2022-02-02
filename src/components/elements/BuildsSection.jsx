@@ -28,6 +28,7 @@ const BuildsSection = (props) => {
                             className='mt-3 flex-wrap d-flex align-items-center flex-column justify-content-center'>
                             <Image
                                 src={require(`../../assets/images/stats/${item.name}.png`)}
+
                             />
                             <p className='mb-0 text-center'>{item.stat_1}</p>
                             <p className='mb-0 text-center'>{item.stat_2}</p>

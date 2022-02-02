@@ -9,7 +9,7 @@ const CharacterItem = (props) => {
 				className={`card-img  ${props.character.rarity} rounded-0 rounded-top`}>
 				<Image
 					loading={"lazy"}
-					className='h-auto'
+					className='h-auto w-100'
 					src={require(`../../assets/images/characters/${props.character.title}/card.webp`)}
 					alt={props.character.body}
 				/>
