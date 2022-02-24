@@ -13,7 +13,7 @@ const CharacterCard = (props) => {
 			<div className='border-bottom d-flex justify-content-center m-0'>
 				<Image
 					src={require(`../../assets/images/characters/${props.character.title}/face.webp`)}
-					className={"h-auto"}
+					className={"h-auto w-auto"}
 				/>
 			</div>
 			<Table size='sm' responsive='sm' className={"mb-0 fs-6"}>
@@ -28,6 +28,7 @@ const CharacterCard = (props) => {
 						<td className={"w-50 font vertical-center"}>Редкость</td>
 						<td className={"w-50 font vertical-center"}>
 							<Image
+								className='w-auto'
 								src={require(`../../assets/images/rarity/${props.character.rarity}.webp`)}
 							/>
 						</td>
@@ -63,15 +64,7 @@ const CharacterCard = (props) => {
 					<tr>
 						<td className={"w-50 font vertical-center"}>Особое блюдо</td>
 						<td className={"w-50 font vertical-center"}>
-							{/* <Image src={props.character.sp_food_im}
-                        width={'60px'}/> */}
 							{props.character.sp_food}
-						</td>
-					</tr>
-					<tr>
-						<td className={"w-50 font vertical-center"}>Созвездие</td>
-						<td className={"w-50 font vertical-center"}>
-							{props.character.constellation}
 						</td>
 					</tr>
 					<tr className={"border-bottom-0"}>
@@ -79,7 +72,10 @@ const CharacterCard = (props) => {
 							Как получить
 						</td>
 						<td className={"w-50 font border-bottom-0 vertical-center"}>
-							{props.character.w_get}
+							<ul className={'px-3 mb-0'}>
+								{props.character.w_get.map((way) =>
+								<li key={way}>{way}</li>)}
+							</ul>
 						</td>
 					</tr>
 				</tbody>

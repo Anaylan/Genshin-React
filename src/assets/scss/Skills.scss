@@ -1,9 +1,15 @@
-.skill_icon {
+.skill_item {
   background: gray;
   border-radius: 40px;
   padding: 4px;
+  text-align: center;
+  transition: .1s ease-in;
+}
+
+.skill_icon {
   transition: .1s ease-in;
   outline: none;
+  transform: scale(70%);
 }
 
 .pr-4 {
@@ -37,18 +43,24 @@
 }
 
 .nav-link:hover {
+  .active {
+  }
+  .skill_item {
+    transform: scale(110%);
+  }
   .skill_icon {
-    transform: scale(105%);
+    transform: scale(80%);
   }
 }
 
 .nav-pills .nav-link.active {
   background-color: #2b69e9;
-
-
   .skill_icon {
+    transform: scale(100%)!important;
+  }
+
+  .skill_item {
     background: none !important;
-    border-radius: 0;
-    padding: 1px;
+
   }
 }

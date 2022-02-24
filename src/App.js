@@ -10,6 +10,7 @@ import React, {useEffect} from "react";
 import {useLocation} from "react-router-dom";
 
 export const nameApp = "Genshin Easy";
+
 ReactGA.initialize("UA-215831491-1");
 const trackPage = (page) => {
     ReactGA.set({page});

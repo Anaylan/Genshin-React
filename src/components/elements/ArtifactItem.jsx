@@ -5,11 +5,12 @@ const ArtifactItem = (props) => {
     return (
         <>
             <div className={`item border rounded ${props.artifact.type} bg-white`}>
-                <div className={`card-img ${props.artifact.rarity} rounded`}>
+                <div className={`card-img artifact ${props.artifact.rarity} rounded`}>
                     <Image
-                        className={"w-100"}
+                        className={"w-100 h-100"}
                         loading={"lazy"}
                         src={require(`../../assets/images/artifacts/${props.artifact.title}.webp`)}
+
                         alt={props.artifact.body}
                     />
                 </div>

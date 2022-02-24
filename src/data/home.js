@@ -1,39 +1,7 @@
 export const wishes = [
 	{
-		title: "Gentry_of_Hermitage",
-		name: "Горы и рынки",
-		start: [
-			{
-				region: "Америка",
-				time: "",
-			},
-			{
-				region: "Европа",
-				time: "",
-			},
-			{
-				region: "Азия",
-				time: "",
-			},
-		],
-		end: [
-			{
-				region: "Америка",
-				time: "",
-			},
-			{
-				region: "Европа",
-				time: "",
-			},
-			{
-				region: "Азия",
-				time: "",
-			},
-		],
-	},
-	{
-		title: "Adrift_in_the_Harbor",
-		name: "Эфемерное недоверие",
+		title: "Everbloom_Violet",
+		name: "Вечноцветущий пурпур",
 		start: [
 			{
 				region: "Америка",
@@ -98,40 +66,8 @@ export const wishes = [
 ];
 export const events = [
 	{
-		title: "Fleeting_Colors_in_Flight",
-        name: "Краски мимолётности",
-		start: [
-			{
-				region: "Америка",
-				time: "",
-			},
-			{
-				region: "Европа",
-				time: "",
-			},
-			{
-				region: "Азия",
-				time: "",
-			},
-		],
-		end: [
-			{
-				region: "Америка",
-				time: "",
-			},
-			{
-				region: "Европа",
-				time: "",
-			},
-			{
-				region: "Азия",
-				time: "",
-			},
-		],
-	},
-    {
-		title: "May_Fortune_Find_You",
-        name: "Пусть удача улыбнётся тебе",
+		title: "Three_Realms_Gateway_Offering",
+        name: "Подношение врат трёх миров",
 		start: [
 			{
 				region: "Америка",

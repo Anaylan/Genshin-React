@@ -4,8 +4,6 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import LayoutDefault from "../layouts/LayoutDefault";
 import {Spinner} from "react-bootstrap";
 
-const ReactGA = lazy(() => import("react-ga"));
-
 const Home = lazy(() => {
     return import("../views/Home");
 });
@@ -49,10 +47,6 @@ const Artifact = lazy(() => {
 const Banner = lazy(() => {
     return import("../views/Banner");
 });
-
-export const initGA = () => {
-    ReactGA.initialize("UA-215831491-1");
-};
 
 const AppRoute = () => {
     return (

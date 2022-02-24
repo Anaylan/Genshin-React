@@ -1,95 +1,76 @@
+// Generated using webpack-cli https://github.com/webpack/webpack-cli
+
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin"); // Импортируем плагин
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
-let mode = "development"; // По умолчанию режим development
-let target = "web"; // в режиме разработки browserslist не используется
-if (process.env.NODE_ENV === "production") {
-	// Режим production, если
-	// при запуске вебпака было указано --mode=production
-	mode = "production";
-	target = "browserslist";
-}
+const isProduction = process.env.NODE_ENV == "production";
 
-const plugins = [
-	new HtmlWebpackPlugin({
-		template: "./public/index.html", // Данный html будет использован как шаблон
-	}),
-	new MiniCssExtractPlugin({
-		filename: "[name].[contenthash].css",
-	}),
-];
+const stylesHandler = isProduction
+    ? MiniCssExtractPlugin.loader
+    : "style-loader";
 
-module.exports = {
-	mode,
-	target,
+const config = {
+    entry: "./src/index.js",
+    output: {
+        path: path.resolve(__dirname, "dist"),
+    },
+    devServer: {
+        open: true,
+        host: "localhost",
+    },
+    resolve: {
+        fallback: {
+            "http": require.resolve("stream-http"),
+            "path": require.resolve("path-browserify")
+        },
+    },
 
-	entry: "./src/index.js",
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "index.html",
+        }),
+        new ModuleFederationPlugin({
+            remotes: {
+                page: 'src',
+            } //указываем контейнер
+        }),
 
-	// настройки вывода
-	output: {
-		path: path.resolve(__dirname, "compile"),
-		assetModuleFilename: "assets/[hash][ext][query]",
-		clean: true, // Очищает директорию compile перед обновлением бандла
-	},
-	//
+        // Add your plugins here
+        // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/i,
+                loader: "babel-loader",
+            },
+            {
+                test: /\.css$/i,
+                use: [stylesHandler, "css-loader"],
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+                type: "asset",
+            },
 
-	// webpack сервер
-	devtool: "source-map",
+            // Add your rules for custom modules here
+            // Learn more about loaders from https://webpack.js.org/loaders/
+        ],
+    },
+};
 
-	devServer: {
-		hot: true, // Включает автоматическую перезагрузку страницы при изменениях
-	},
-	//
+module.exports = () => {
+    if (isProduction) {
+        config.mode = "production";
 
-	resolve: {
-		modules: [".", "node_modules"],
-	},
+        config.plugins.push(new MiniCssExtractPlugin());
 
-	module: {
-		rules: [
-			{ test: /\.(html)$/, use: ["html-loader"] }, // Загрузчик для html
-			{
-				test: /\.(s[ac]|c)ss$/i, // Загрузчик для sass
-				use: [
-					MiniCssExtractPlugin.loader,
-					"css-loader",
-					"postcss-loader",
-					"sass-loader",
-				],
-			},
-			// {
-			//   test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
-			//   type: mode === 'production' ? 'asset' : 'asset/resource', // В продакшен режиме
-			//   // изображения размером до 8кб будут инлайнится в код
-			//   // В режиме разработки все изображения будут помещаться в dist/assets
-			// },
-			{
-				test: /\.(woff2?|eot|ttf|otf)$/i, // Загрузчик для шрифтов
-				type: "asset/resource",
-			},
-
-			{
-				test: /\.js$/, // Загрузчик для js
-				exclude: /node_modules/, // не обрабатываем файлы из node_modules
-				use: {
-					loader: "babel-loader",
-					options: {
-						cacheDirectory: true,
-					},
-				},
-			},
-			{
-				test: /\.jsx?$/, // Загрузчик для jsx
-				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader",
-					options: {
-						cacheDirectory: true,
-					},
-				},
-			},
-		],
-	},
+        config.plugins.push(new WorkboxWebpackPlugin.GenerateSW());
+    } else {
+        config.mode = "development";
+    }
+    return config;
 };

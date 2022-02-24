@@ -11,6 +11,7 @@ import "../assets/css/banners.css";
 import SwiperCore, {Pagination} from "swiper";
 import Banner from "../components/elements/Banner";
 import {Helmet} from "react-helmet";
+import {nameApp} from "../App";
 
 // install Swiper modules
 SwiperCore.use([Pagination]);
@@ -28,7 +29,7 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Путеводитель по Тейвату | Genshin Easy</title>
+                <title>Путеводитель по Тейвату | {nameApp}</title>
                 <meta name="description"
                       content="Genshin Easy - Полезные гайды и инструменты для путешественников по миру игры Genshin Impact, а также еженедельные обновления гайдов."/>
                 <meta name="keywords" content='гайды, genshin, impact, ивенты, мероприятия, молитвы,

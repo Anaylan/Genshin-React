@@ -20,13 +20,6 @@ const CharacterItem = (props) => {
 				}>
 				{props.character.body}
 			</span>
-			{/* <span className='card-tag position-absolute rounded px-1 mt-2 mx-1 bg-dark bg-opacity-75'>
-                <Image
-					className='_img'
-					width={"30px"}
-					src={require(`../../assets/images/weapons_type/${props.character.weapon_type}.webp`)}
-				/>
-			</span> */}
 		</article>
 	);
 };
